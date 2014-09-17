@@ -1,0 +1,10 @@
+{
+    butonConfig:[
+            {
+                name:'btnDel',
+                desc:'1',
+		type: 'multi',
+                visible:true,
+                enable:true
+            }]
+}

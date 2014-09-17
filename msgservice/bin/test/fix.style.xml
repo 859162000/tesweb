@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="gb2312">
+        <format>%[len='4']s%s</format>
+        <param>lm</param>
+        <param>m</param>
+    </Document>
+
+    <Field>
+        <format>%s</format>
+        <param>v</param>
+    </Field>
+</Format>

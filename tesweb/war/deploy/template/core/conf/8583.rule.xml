@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Format>
+	<Document encoding="gb2312">
+		<format>
+			%[len='4']s%s%s
+		</format>
+		<param></param>
+		<param></param>
+		<param>m</param>
+	</Document>
+
+	<Field usage="format=DATA;type=B">
+		<format>%B</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=B">
+		<format>%[len='2',align='right']b%[ignoreLen='true']B</format>
+		<param>lr.1</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=B">
+		<format>%[len='2',align='right']b%[ignoreLen='true']B</format>
+		<param>lr.1</param>
+		<param>v</param>
+	</Field>
+	
+	<Field usage="format=DATA;type=int">
+		<format>%b</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=int">
+		<format>%[len='2',align='right']b%[ignoreLen='true',align='left']b</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=int">
+		<format>%[len='2',align='right']b%[ignoreLen='true',align='left']b</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=DATA;type=string">
+		<format>%[align='right',fillingChar=' ']s</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=string">
+		<format>%[len='2',align='right']b%[ignoreLen='true']s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=string">
+		<format>%[len='2',align='right']b%[ignoreLen='true']s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+
+    <Script target="" usage="Before"><![CDATA[
+		// 解析位图
+		
+		int bmLen = bytes[4] < 0 ? 16 : 8;// 用符号位判断是否存在扩展位图
+
+		byte[] bitmap = new byte[bmLen];
+		System.arraycopy(bytes, 4, bitmap, 0, bmLen);
+
+		for (int bmIndex = 0; bmIndex < bitmap.length; bmIndex++)
+			for (int i = 0; i < 8; i++)
+				if ((1 << (7 - i) & bitmap[bmIndex]) == 0)
+					((MsgStruct)template).remove("b" + String.valueOf(bmIndex * 8 + i + 1));
+		
+		item.setAttribute(MsgContainerUtils.C_InternalDomElementPrefix + "lr.1", new Value(String.valueOf(bmLen)));
+        return 0;
+		]]>
+    </Script>
+</Format>

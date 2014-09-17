@@ -1,0 +1,51 @@
+{
+    butonConfig:[{
+                name:'btnAdd',
+                desc:'1',
+		type: '',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnDel',
+                desc:'1',
+		type: 'multi',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnEdit',
+                desc:'1',
+		type: 'single',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnResultExport',
+                desc:'1',
+		type: 'single',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnCasePackage',
+                desc:'1',
+		type: 'single',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnCompareResult',
+                desc:'1',
+		type: 'single',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnCaseFlowInfo',
+                desc:'1',
+		type: 'single',
+                visible:true,
+                enable:true
+            }]
+}

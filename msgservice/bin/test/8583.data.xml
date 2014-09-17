@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="gb2312"?>
+<msg>
+    <field name="b2" type="int" format="LLVAR" len="19" desc="Primary account number(PAN)">3540599999991120</field>
+    <field name="b3" type="int" format="DATA" len="6" desc="Processing code">000000</field>
+    <field name="b4" type="int" format="DATA" len="12" desc="Amount, transaction">000000026119</field>
+    <field name="b7" type="int" format="DATA" len="10" desc="Transmission date and Time">0923072729</field>
+    <field name="b11" type="int" format="DATA" len="6" desc="System trace audit number">468214</field>
+    <field name="b12" type="int" format="DATA" len="6" desc="Time, local transaction">151228</field>
+    <field name="b13" type="int" format="DATA" len="4" desc="Date, local transaction">0923</field>
+    <field name="b14" type="int" format="DATA" len="4" desc="Date, expiration">9812</field>
+    <field name="b32" type="int" format="LLVAR" len="11" desc="Acquiring institution identification code">88020000</field>
+    <field name="b33" type="int" format="LLVAR" len="11" desc="Forwarding institution identification code">88020000</field>
+    <field name="b37" type="string" format="DATA" len="12" desc="Retrieval reference number">aabbccddee</field>
+    <field name="b38" type="string" format="DATA" len="6" desc="Authorization identification response">115118</field>
+</msg>

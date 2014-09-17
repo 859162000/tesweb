@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="GBK" ?>
+<project name="GeneralTcpAdapter" default="doc" basedir=".">
+	<description>通用TCP适配器的构建发布</description>
+	
+	<!-- 定义文件中的变量值-->
+	<property name="src.dir" value="src" description="源代码目录"/>
+	<property name="test.dir" value="test" description="单元测试代码目录"/>
+	<property name="stub.dir" value="stub" description="桩模块代码目录"/>
+	<property name="report.dir" value="report" description="JUnit测试报告目录"/>
+	<property name="classes.dir" value="classes" description="生成的类文件存放目录"/>
+	<property name="lib.dir" value="lib" description="库文件目录"/>
+	<property name="dist.dir" value="dist" description="JAR包发布目录"/>
+	<property name="doc.dir" value="doc" description="API文档生成目录"/>
+	
+	<!-- 定义classpath -->
+	<path id="master-classpath">
+		<fileset file="${lib.dir}/*.jar" />
+		<pathelement path="${classes.dir}"/>
+	</path>
+	
+	<!-- 1.初始化 -->
+	<target name="init" description="进行初始化，其实就是纯输出，啥都不做。">
+		<echo level="info">初始化完成</echo>
+	</target>
+	
+	<!-- 2.编译 -->
+	<target name="compile" depends="init" description="对源文件进行编译">
+		<echo level="info">编译桩模块代码......</echo>
+		<javac srcdir="${stub.dir}" destdir="${classes.dir}" target="1.4" source="1.4" encoding="UTF-8">
+			<classpath refid="master-classpath"/>
+		</javac>
+		<echo level="info">开始编译源代码......</echo>
+		<mkdir dir="${classes.dir}" description="创建类文件目录"/>
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" target="1.4" source="1.4" encoding="UTF-8">
+			<classpath refid="master-classpath"/>
+		</javac>
+		<echo level="info">编译测试代码......</echo>
+		<javac srcdir="${test.dir}" destdir="${classes.dir}" target="1.4" source="1.4" encoding="UTF-8">
+			<classpath refid="master-classpath"/>
+		</javac>
+		<echo level="info">编译完成</echo>
+	</target>
+	
+	<!-- 3.打包桩模块 -->
+		<target name="packStub" depends="compile" description="创建桩模块JAR包">
+			<echo level="info">打包桩模块......</echo>
+			<jar destfile="${lib.dir}/Adapter2Tes.jar" basedir="${classes.dir}">
+				<exclude name="**/*Test.*" />
+				<exclude name="**/Test*.*" />
+				<exclude name="**/*Stub.*" />
+				<exclude name="**/*er.*" />
+				<exclude name="**/*ty.*" />
+			</jar>
+			<echo level="info">桩模块打包完成</echo>
+		</target>
+	
+	<!-- 4.执行JUnit单元测试代码 -->
+	<target name="test" depends="packStub" description="执行单元测试代码">
+		<echo level="info">开始测试......</echo>
+		<mkdir dir="${report.dir}" description="创建测试报告目录"/>
+		<junit printsummary="on" haltonfailure="false" 
+			failureproperty="tests.failed" showoutput="true">
+			<classpath refid="master-classpath" />
+			<formatter type="plain"/>
+			<batchtest todir="${report.dir}">
+				<fileset dir="${classes.dir}">
+					<include name="**/*Test.*"/>
+				</fileset>
+			</batchtest>
+		</junit>
+		<fail if="tests.failed">至少一个测试未通过，请查看测试报告</fail>
+		<echo level="info">测试结束</echo>
+		</target>
+	
+	<!-- 5.打包成jar -->
+	<target name="pack" depends="test" description="创建JAR包">
+		<echo level="info">开始打包......</echo>
+		<delete file="${dist.dir}/GeneralTcpAdapter.jar" />
+		<mkdir dir="${dist.dir}" />
+		<jar destfile="${dist.dir}/GeneralTcpAdapter.jar" basedir="${classes.dir}" encoding="UTF-8">
+			<exclude name="**/*Test.*" />
+			<exclude name="**/Test*.*" />
+			<exclude name="**/*Stub.*" />
+		</jar>
+		<echo level="info">打包完成</echo>
+	</target>
+	
+	<!-- 6.输出api文档 -->
+	<target name="doc" depends="pack" description="创建API文档">
+		<echo level="info">开始输出API文档......</echo>
+		<mkdir dir="${doc.dir}" />
+		<javadoc packagenames="${javadoc.packages}" destdir="${doc.dir}" author="true" version="true" 
+			use="true" windowtitle="JAVA版适配器核心通讯API" encoding="UTF-8">
+			<packageset dir="${src.dir}" defaultexcludes="yes">
+				<include name="com/dc/tes/gta/**" />
+			</packageset>
+			<doctitle><![CDATA[<h1>通用TCP适配器API</h1>]]></doctitle>
+			<bottom><![CDATA[<i>All Rights Reserved.</i>]]></bottom>
+			<tag name="todo" scope="all" description="To do:" />
+		</javadoc>
+		<echo level="info">API文档输出完成</echo>
+	</target>
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="gb2312"?>
+<msg>
+	<struct name="root" isarray="true">
+		<field name="FunctionId">20302</field>
+		<field name="ExSerial">29909012</field>
+		<field name="bOrganId">organid</field>
+		<field name="bBranchId">branchid</field>
+		<field name="bDeptId">deptid</field>
+		<field name="bCustAcct">custacct</field>
+		<field name="sOrganId">sorganid</field>
+		<field name="sBranchId">sbranchid</field>
+		<field name="sCustAcct">scustacct</field>
+		<field name="sCustPwd2">scustpwd2</field>
+		<field name="CardType">cardype</field>
+		<field name="Card">card</field>
+		<field name="sCustProperty">scustproperty</field>
+		<field name="MoneyType">moneytype</field>
+		<field name="sBrokeCustPermit">sbrokecustpermit</field>
+	</struct>
+</msg>

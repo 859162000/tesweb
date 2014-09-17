@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<project name="tesmanager" default="doc" basedir=".">
+<description>用于TES管理界面的自动化测试和发布</description>
+
+	<!-- 定义文件中的变量值-->
+	<property name="src.dir" value="src" description="源代码目录" />
+	<property name="test.dir" value="test" description="单元测试代码目录" />
+	<property name="report.dir" value="report" description="JUnit测试报告目录" />
+	<property name="classes.dir" value="war/WEB-INF/classes" description="生成的类文件存放目录" />
+	<property name="lib.dir" value="war/WEB-INF/lib" description="库文件目录" />
+	<property name="gwt.home" value="../gwt-windows-1.7.1/gwt-windows-1.7.1" description="GWT库文件目录" />
+	<property name="dist.dir" value="dist" description="WAR包发布目录" />
+	<property name="doc.dir" value="doc" description="API文档生成目录" />
+	<!-- Use Linux or Windows gwt-dev jar * you gwt type windows/linux * -->
+	<!-- <property name="gwt.flavour" value="windows" /> -->
+	<property name="gwt.flavour" value="windows" />
+
+
+	<!-- 定义classpath -->
+	<path id="master-classpath">
+		<fileset file="${lib.dir}/*.jar" />
+		<pathelement path="${classes.dir}" />
+		<fileset dir="${gwt.home}" includes="gwt-dev-${gwt.flavour}.jar" />
+		<pathelement path="${gwt.home}/gwt-user.jar" />
+	</path>
+
+	<path id="compile-classpath">
+		<!-- * the lib folder include all related-jars of GWT, it should be in same folder with this build.xml *-->
+		<fileset file="${lib.dir}/*.jar" />
+		<pathelement path="${classes.dir}" />
+	</path>
+
+	<path id="gwt-classpath">
+		<!-- Adjust for Linux/Windows as necessary -->
+		<fileset dir="${gwt.home}" includes="gwt-dev-${gwt.flavour}.jar" />
+		<pathelement path="${gwt.home}/gwt-user.jar" />
+	</path>
+
+	<!-- 1.初始化 -->
+	<target name="init" description="进行初始化，其实就是纯输出，啥都不做。">
+		<echo level="info">初始化完成</echo>
+	</target>
+
+	<!-- 2.编译 -->
+	<target name="compile" depends="init" description="对源文件进行编译">
+		<echo level="info">开始编译源代码......</echo>
+		<echo level="info">删除classes文件......</echo>
+		<delete dir="war/WEB-INF/classes/com" failonerror="false"/>
+		<mkdir dir="${classes.dir}" description="创建类文件目录" />
+		<javac srcdir="${src.dir}" debug="true" destdir="${classes.dir}" target="1.6" source="1.6" encoding="UTF-8" >
+			<classpath refid="master-classpath" >	
+			</classpath>
+		</javac>
+		<mkdir dir="war" />
+		<java classpathref="gwt-classpath" classname="com.google.gwt.dev.GWTCompiler" fork="true">
+			<classpath>
+				<pathelement path="${src.dir}" />
+				<fileset dir="${gwt.home}">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+			<jvmarg value="-Xmx512M" /> 
+			<arg value="-out" />
+			<arg value="war" />
+			<arg value="-style" />
+			<arg value="DETAILED" />
+			<arg value="com.dc.tes.ui.MainPage" />
+		</java>
+		<echo level="info">编译测试代码......</echo>
+		<javac srcdir="${test.dir}" destdir="${classes.dir}" target="1.6" source="1.6" encoding="UTF-8" debug="true">
+			<classpath refid="master-classpath">	
+			</classpath>
+		</javac>
+		<echo level="info">编译完成</echo>
+	</target>
+
+	<!-- 4.打包成war -->
+	<target name="pack" depends="compile" description="创建JAR包">
+		<echo level="info">开始打包......</echo>
+		<delete file="${dist.dir}/tesweb.war" />
+		<mkdir dir="${dist.dir}" />
+		<war destfile="${dist.dir}/tesweb.war" webxml="war/WEB-INF/web.xml">
+			<lib dir="war/WEB-INF/lib" includes="*.jar" />
+			<classes dir="war/WEB-INF/classes" />
+			<fileset dir="war" >
+				<exclude name="**/*Test.*" />
+				<exclude name="**/Test*.*" />
+			</fileset>
+		</war>
+		<echo level="info">打包完成</echo>
+	</target>
+	
+	<!-- 5.输出api文档 -->
+	<target name="doc" depends="pack" description="创建API文档">
+		<echo level="info">开始输出API文档......</echo>
+		<mkdir dir="${doc.dir}" />
+		<javadoc packagenames="${javadoc.packages}" destdir="${doc.dir}" author="true" version="true" 
+			use="true" windowtitle="TES界面API" encoding="UTF-8">
+			<packageset dir="${src.dir}" defaultexcludes="yes">
+				<include name="com/dc/tes/ui/**" />
+			</packageset>
+			<doctitle><![CDATA[<h1>TES界面API</h1>]]></doctitle>
+			<bottom><![CDATA[<i>All Rights Reserved.</i>]]></bottom>
+			<tag name="todo" scope="all" description="To do:" />
+		</javadoc>
+		<echo level="info">API文档输出完成</echo>
+	</target>
+</project>
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+    butonConfig:[{       
+                name:'btnDate',
+                desc:'1',
+				type: '',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnOk',
+                desc:'1',
+				type: 'single',
+                visible:true,
+                enable:true
+            },
+            {
+                name:'btnDel',
+                desc:'1',
+				type: 'multi',
+                visible:true,
+                enable:true
+            },            
+            {
+                name:'btnEdit',
+                desc:'1',
+				type: 'single',
+                visible:true,
+                enable:true
+            }]
+}

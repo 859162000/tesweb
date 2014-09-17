@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="QueueLogStat" table="t_queuelogstat">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="queuelist" class="QueueList" fetch="join"> <!-- lazy="false" -->
+			<column name="QUEUELISTID" not-null="true" ></column>
+		</many-to-one>
+		
+		<property name="begintime" column="BEGINTIME" />
+		<property name="endtime" column="ENDTIME" />
+		<property name="busistat" column="BUSISTAT" />
+		<property name="busilog" column="BUSILOG" />
+		<property name="casestat" column="CASESTAT" />
+		<property name="caselog" column="CASELOG" />
+
+	</class>
+</hibernate-mapping>

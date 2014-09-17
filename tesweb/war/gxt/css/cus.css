@@ -1,0 +1,15 @@
+.tes-table-name {
+	text-align:left;
+	font-size:10pt;
+}
+
+.tes-table-value {
+	text-align:right;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.tes-table-header {
+	text-align:left;
+	color:#33CC33;
+}

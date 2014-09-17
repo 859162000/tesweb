@@ -1,0 +1,63 @@
+
+CC		= gcc
+CCC		= gcc
+
+.SUFFIXES: .cpp .o .c
+.cpp.o          :
+	$(CCC) $(CPPFLAGS) -c $<
+
+.c.o:
+	${CC} ${CFLAGS} -c $<
+
+################################################################################
+
+# 底层库及其头文件路径
+BASEINC		= $(HOME)/inc
+BASELIB		= $(HOME)/lib/liblinux
+
+# 核心库及其头文件路径
+INC		= $(HOME)/agent/inc
+LIB		= $(HOME)/agent/lib
+
+MQINC		= /opt/mqm/inc
+MQLIB		= /opt/mqm/lib
+# 编译选项
+CFLAGS		= -w -g  -I$(TUXDIR)/include -I$(BASEINC) -I$(INC) -I$(MQINC) -I. 
+CPPFLAGS	= $(CPPFLAGS)
+LIB_PATH	= -L$(BASELIB) -L$(TUXDIR)/lib -L$(MQLIB)
+LINKLIB		= -lUtil -lTCPcomm -lapitcps32 -lmqic
+
+
+# 头文件
+PUBLICINC	=  
+
+# 生成可执行文件
+PUBLICEXE	= 
+
+# 其他宏定义
+PUBLICMSG   = " ==================== "
+ELGTOBJS = 
+
+################################################################################
+
+
+# 所有编译单元
+all:		CltMQ  CltMQSec.so testdes install clean	
+
+CltMQ:		CltMQ.o
+		$(CC) -o $@  $? $(LIB_PATH) $(LINKLIB)
+testdes:	testdes.o
+		$(CC) -o $@  $? $(LIB_PATH) -lsecapi 
+CltMQSec.so:	CltMQSec.o
+		$(CC) -fPIC -shared -o $@  $? $(LIB_PATH) -lsecapi 
+install:
+		mv CltMQ $(HOME)/agent/bin
+		mv CltMQSec.so $(HOME)/agent/lib
+
+
+# 删除目标文件 
+clean:
+			rm *.o
+			@echo $(PUBLICMSG) "End Making" 
+			@echo ""
+

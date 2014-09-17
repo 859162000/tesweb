@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Monitor>
+	<!--<step id="采集点" time="采集时间" responseTotle="总响应时间" TPS="TPS" delayTime="平均延迟时间" cpu="CPU利用率"/>-->
+    <step id="1" time="19:35:27" responseTotle="46" successed="41" TPS="28" delayTime="200" cpu="23"/>
+    <step id="2" time="19:35:32" responseTotle="67" successed="32" TPS="44" delayTime="431" cpu="25"/>
+    <step id="3" time="19:35:37" responseTotle="31" successed="28" TPS="23" delayTime="267" cpu="64"/>
+    <step id="4" time="19:35:42" responseTotle="36" successed="29" TPS="64" delayTime="286" cpu="23"/>
+    <step id="5" time="19:35:47" responseTotle="27" successed="11" TPS="83" delayTime="301" cpu="64"/>
+    <step id="6" time="19:35:52" responseTotle="85" successed="67" TPS="32" delayTime="287" cpu="24"/>
+    <step id="7" time="19:35:57" responseTotle="56" successed="53" TPS="53" delayTime="199" cpu="87"/>
+    <step id="8" time="19:36:02" responseTotle="46" successed="21" TPS="62" delayTime="243" cpu="45"/>
+    <step id="9" time="19:36:07" responseTotle="47" successed="41" TPS="25" delayTime="265" cpu="34"/>
+    <step id="10" time="19:36:12" responseTotle="88" successed="49" TPS="26" delayTime="298" cpu="74"/>
+    <step id="11" time="19:36:17" responseTotle="96" successed="93" TPS="74" delayTime="347" cpu="23"/>
+    <step id="12" time="19:36:22" responseTotle="98" successed="91" TPS="36" delayTime="307" cpu="79"/>
+    <step id="13" time="19:36:27" responseTotle="54" successed="48" TPS="74" delayTime="293" cpu="54"/>
+    <step id="14" time="19:36:32" responseTotle="46" successed="17" TPS="35" delayTime="311" cpu="86"/>
+    <step id="15" time="19:36:37" responseTotle="71" successed="26" TPS="22" delayTime="244" cpu="54"/>
+</Monitor>

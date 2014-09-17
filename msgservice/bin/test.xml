@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+  <field name="TransNo" isarray="true"></field>
+  <field name="BankCode"></field>
+  <field name="BeiYong"></field>
+</msg>

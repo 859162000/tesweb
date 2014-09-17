@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format>F028%[len='5',align='right',fillingChar='0']s????????000???mac??%s</format>
+		<param>lm</param>
+		<param>m</param>
+	</Document>
+	<FieldInStruArray>
+		<format>%s%{01}</format>
+		<param>v</param>
+	</FieldInStruArray>
+	<StruInArray>
+		<format>%s</format>
+		<param>m</param>
+	</StruInArray>
+	<Array>
+		<format>%s%{01}%s%{01}%s%s</format>
+		<param>s.colCount</param>
+		<param>mc</param>
+		<param>s.title</param>
+		<param>m</param>
+	</Array>
+
+	<Script name="colCount"><![CDATA[
+		MsgStruct stru = (MsgStruct) ((MsgArray) item).get(0);
+		return new Value(stru.size());
+	]]></Script>
+	<Script name="title"><![CDATA[
+		BytePackage p = new BytePackage();
+		MsgStruct stru = (MsgStruct) ((MsgArray) item).get(0);
+		for (MsgItem child : stru) {
+			p.Append(child.name().getBytes(context.spec.encoding));
+			p.Append(new byte[] { 1 });
+		}
+		return new Value(p.Export());
+	]]></Script>
+</Format>

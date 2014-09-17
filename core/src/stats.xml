@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>  
+    <Stat_Specified_Period>true</Stat_Specified_Period>
+    <StatBeginDay>20130829</StatBeginDay>
+    <StatEndDay>20130829</StatEndDay>
+    <StatMonth>20130829</StatMonth>
+    
+    <autostat_on>true</autostat_on>
+    
+    <autostat_daily>false</autostat_daily>
+    <autostat_monthly>true</autostat_monthly>
+    <autostat_quaterly>true</autostat_quaterly>
+    <autostat_halfyearly>true</autostat_halfyearly>
+    <autostat_yearly>true</autostat_yearly>
+    
+    <Stat_All_Systems>false</Stat_All_Systems>
+    <SpecifiedSystemName>二代支付前置机</SpecifiedSystemName>
+</config>

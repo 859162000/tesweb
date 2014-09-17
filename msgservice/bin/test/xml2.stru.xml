@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<struct name="GrpHdr" isarray="false" desc="GrpHdr">
+		<field name="Version" type="string" len="30" optional="false" isarray="false" desc="版本">1.0.0</field>
+		<field name="SysType" type="string" len="1" optional="false" isarray="false" desc="应用系统类型">8</field>
+		<field name="BusCd" type="string" len="5" optional="false" isarray="false" desc="业务功能号" isMAC="true">20001</field>
+		<field name="TradSrc" type="string" len="1" optional="false" isarray="false" desc="交易发起方" isMAC="true">F</field>
+		<struct name="Sender" isarray="false" desc="发送机构">
+			<field name="InstId" type="string" len="30" optional="false" isarray="false" desc="机构标识" isMAC="true">99999999</field>
+			<field name="InstNm" type="string" len="60" optional="true" isarray="false" desc="机构名称"></field>
+			<field name="BrchId" type="string" len="30" optional="true" isarray="false" desc="分支机构编码"></field>
+			<field name="BrchNm" type="string" len="60" optional="true" isarray="false" desc="分支机构名称"></field>
+			<field name="SubBrchId" type="string" len="30" optional="true" isarray="false" desc="网点号"></field>
+			<field name="SubBrchNm" type="string" len="60" optional="true" isarray="false" desc="网点名称"></field>
+		</struct>
+		<struct name="Recver" isarray="false" desc="接收机构">
+			<field name="InstId" type="string" len="30" optional="false" isarray="false" desc="机构标识" isMAC="true">10200000</field>
+			<field name="InstNm" type="string" len="60" optional="true" isarray="false" desc="机构名称"></field>
+			<field name="BrchId" type="string" len="30" optional="true" isarray="false" desc="分支机构编码"></field>
+			<field name="BrchNm" type="string" len="60" optional="true" isarray="false" desc="分支机构名称"></field>
+			<field name="SubBrchId" type="string" len="30" optional="true" isarray="false" desc="网点号"></field>
+			<field name="SubBrchNm" type="string" len="60" optional="true" isarray="false" desc="网点名称"></field>
+		</struct>
+		<field name="Date" type="string" len="8" optional="false" isarray="false" desc="交易日期" isMAC="true">20080131</field>
+		<field name="Time" type="string" len="6" optional="false" isarray="false" desc="交易时间">145323</field>
+	</struct>
+	<field name="BkSeq" type="string" len="30" optional="true" isarray="false" desc="银行流水号"></field>
+	<field name="FtSeq" type="string" len="30" optional="true" isarray="false" desc="期货公司流水号" isMAC="true"></field>
+	<field name="MacKey" type="string" len="128" optional="true" isarray="false" desc="MAC密钥" isMAC="true">1234567890123456</field>
+	<field name="Mac" type="string" len="30" optional="false" isarray="false" desc="MAC校验码"></field>
+</msg>

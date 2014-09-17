@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<msg>
+    <field name="BIPCode"></field>
+    <field name="BIPVer"></field>
+    <field name="ActivityCode"></field>
+    <field name="ActionCode"></field>
+    <field name="ProcID"></field>
+    <field name="TransIDO"></field>
+    <field name="TransIDH"></field>
+    <field name="ProcessTime"></field>
+    <field name="TestFlag"></field>
+    <field name="MsgSender"></field>
+    <field name="MsgReceiver"></field>
+    <field name="SvcContVer"></field>
+    <struct name="SvcCont">
+    </struct>
+</msg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/adapterhost.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/TESAdapterSecureLib.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/TESAdapterHelper.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/hibernate3.jar" sourcepath="D:/eclipse_workspace/tesweb/war/WEB-INF/lib-src/hibernate-distribution-3.3.1.GA-dist.zip"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/log4j-1.2.15.jar" sourcepath="D:/eclipse_workspace/tesweb/war/WEB-INF/lib-src/log4j-1.2.15-sources.zip"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/cglib-2.2.jar" sourcepath="D:/eclipse_workspace/tesweb/war/WEB-INF/lib-src/cglib-src-2.2.zip"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/com.ibm.mq.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/jetty-all-7.6.9.v20130131.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/core.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/com.ibm.mqjms.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/common.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/BubSysJNI.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/slf4j-nop-1.5.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

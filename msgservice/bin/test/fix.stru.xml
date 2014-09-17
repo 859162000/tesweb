@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+    <field name="interfaceName" len="25"/>
+    <field name="interfaceVersion" len="25"/>
+    <field name="orderid" len="25"/>
+    <field name="amount" len="25"/>
+    <field name="curType" len="25"/>
+    <field name="merID" len="25"/>
+    <field name="merAcct" len="25"/>
+    <field name="verifyJoinFlag" len="25"/>
+    <field name="notifyType" len="25"/>
+    <field name="merURL" len="25"/>
+    <field name="resultType" len="25"/>
+    <field name="goodsID" len="25"/>
+    <field name="goodsName" len="24"/>
+    <field name="goodsNum" len="25"/>
+    <field name="carriageAmt" len="25"/>
+    <field name="merHint" len="24"/>
+    <field name="orderDate" len="25"/>
+    <field name="remark1" len="25"/>
+    <field name="remark2" len="25" />
+</msg>

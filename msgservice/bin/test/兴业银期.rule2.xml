@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="gb2312">
+        <format>%[len='4']s%[len='558']s%[len='64']s</format>
+        <param>_</param>
+        <param>m</param>
+        <param>_</param>
+    </Document>
+
+    <Field>
+        <format>%[align='left',fillingChar='\0']s%{00}</format>
+        <param>v</param>
+    </Field>
+</Format>

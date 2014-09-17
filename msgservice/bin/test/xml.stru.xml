@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<struct name="pub">
+		<field name="TransCode" len="10" desc="交易代码" />
+		<field name="CIS" len="60" desc="集团CIS号" />
+		<field name="BankCode" len="3" desc="归属银行编号" />
+		<field name="ID" len="40" desc="证书ID" />
+		<field name="TranDate" len="8" desc="交易日期" />
+		<field name="TranTime" len="12" desc="交易时间" />
+		<field name="fSeqno" len="35" desc="指令包序列号" />
+	</struct>
+	<struct name="in">
+		<field name="TranType" len="1" desc="支付指令类型" />
+		<field name="ShopType" len="1" desc="商城类型" />
+		<field name="ShopCode" len="14" desc="商城代码" />
+		<field name="ShopAcct" len="19" desc="商城账号" />
+		<field name="OrderNum" len="30" desc="订单号" />
+		<field name="PayType" len="1" desc="支付速度方式" />
+		<field name="PayDate" len="14" desc="原订购指令支付时间" />
+		<field name="TransferName" len="60" desc="转付人名称" />
+		<field name="TransferAccNo" len="20" desc="转付账号/卡号" />
+		<field name="PayAmt" len="18" desc="金额" />
+		<field name="SignTime" len="17" desc="签名时间" />
+		<struct name="rd">
+			<field name="iSeqno">0002</field>
+			<field name="HolderName">BBB</field>
+			<field name="HolderAccNo">001099910270392</field>
+			<field name="ReqReserved3"></field>
+			<field name="ReqReserved4"></field>
+		</struct>
+		<field name="ReqReserved1" len="100" desc="请求备用字段1" />
+		<field name="ReqReserved2" len="100" desc="请求备用字段2" />
+	</struct>
+</msg>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+        <data>db.mysql</data>
+        <conn>jdbc:mysql://localhost:3306/tesdb</conn>
+        <username>root</username> 
+        <password>123456</password>
+</config>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<field name="one" len="6" type="string">123456</field>
+	<field name="two" len="3" type="string">aaa</field>
+	<field name="three" len="3" type="string">BBB</field>
+</msg>

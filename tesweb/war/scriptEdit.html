@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language = "javascript" type="text/javascript">
+        var needSet = true;
+        function getTextValue() {
+            var value = cp1.getCode();
+            value = value.substr(0, value.length - 1);
+            return value;
+        }
+
+        function setTextValue(value) {
+            if (needSet) {
+                needSet = true;
+                try {
+//                    for(int i = 0; i<4;i++)
+//                    {
+//                   document.getElementById("cp1_cp").value = value;
+//                    document.getElementById("cp1_cp").value = value;
+//                    document.getElementById("cp1_cp").value = value;
+                    document.getElementById("cp1").innerText = value;
+//                       }
+                } catch (e) {
+                    alert('Exception');
+                }
+            }
+        }
+
+        function SetValueFromParent() {
+//            alert(parent.document.getElementsByTagName("div")[0].innerHTML);
+//            setTextValue(parent.document.getElementsByTagName("div")[0].innerHTML);
+        }
+    </script>
+</head>
+<body style = "margin:0px; padding:0px;height:100%" onload = "SetValueFromParent()" >
+    <textarea id="cp1" class="codepress javascript" style="width:100%; height: 400px;"
+        wrap="off">
+    </textarea>
+    <script type="text/javascript">
+    function SetSize()
+    {
+    	document.getElementById("cp1").style.height = parent.document.all.editScriptFrm.height;
+    }
+    SetSize();
+    </script>
+    <script src="TxtEdit/codepress.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+export BDMCONFIG=/home/tesadpt/agent/etc/bdmconfig
+export TUXCONFIG=/home/tesadpt/agent/etc/tuxconfig

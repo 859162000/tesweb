@@ -1,0 +1,61 @@
+
+CC		= gcc
+CCC		= gcc
+
+.SUFFIXES: .cpp .o .c
+.cpp.o          :
+	$(CCC) $(CPPFLAGS) -c $<
+
+.c.o:
+	${CC} ${CFLAGS} -c $<
+
+################################################################################
+
+# 底层库及其头文件路径
+BASEINC		= $(HOME)/inc
+BASELIB		= $(HOME)/lib/liblinux
+
+# 核心库及其头文件路径
+INC			= $(HOME)/agent/inc
+LIB			= $(HOME)/agent/lib
+
+# 编译选项
+CFLAGS		= -ansi -w -g  -I$(TUXDIR)/include -I$(BASEINC) -I$(INC) -I. 
+CPPFLAGS	= $(CPPFLAGS)
+LIB_PATH	= -L$(BASELIB) -L$(TUXDIR)/lib
+LINKLIB		= -lUtil -lTCPcomm -lapitcps32
+
+
+# 头文件
+PUBLICINC	=  
+
+# 生成可执行文件
+PUBLICEXE	= 
+
+# 其他宏定义
+PUBLICMSG   = " ==================== "
+ELGTOBJS = 
+
+################################################################################
+
+
+# 所有编译单元
+all:		CltTux CltTuxDom CltTuxSec.so install clean	
+
+CltTux:		CltTux.o
+		CC=$(CCC) buildclient -w -o $@ -f "$?" -l "$(LIB_PATH) $(LINKLIB)"
+CltTuxDom:	CltTux.o
+		CC=$(CCC) buildclient -o $@ -f "$?" -l "$(LIB_PATH) $(LINKLIB)"
+CltTuxSec.so:	CltTuxSec.o
+		$(CC) -fPIC -shared -o $@  $?
+install:
+		mv CltTux $(HOME)/agent/bin
+		mv CltTuxDom $(HOME)/agent/bin
+		mv CltTuxSec.so $(HOME)/agent/lib
+
+# 删除目标文件 
+clean:
+			rm *.o
+			@echo $(PUBLICMSG) "End Making" 
+			@echo ""
+

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Case" table="t_case">
+
+		<id name="caseId" column="CASEID">
+			<generator class="identity" />
+		</id>
+
+		<property name="caseName" column="CASENAME" />
+		<property name="responContent" column="RESPONCONTENT" lazy="true"/>
+		<property name="xmlContent" column="XMLCONTENT" lazy="true"/>
+		<property name="isParseable" column="ISPARSEABLE" />
+		<property name="flag" column="FLAG" />
+		<property name="transactionId" column="TRANSACTIONID"/>
+
+		<property name="oraclecontent" column="ORACLECONTENT" />
+		
+		<property name="isdefault" column="ISDEFAULT" />
+		
+		<!-- 
+		<many-to-one name="transaction" class="Transaction" fetch="join"> 
+			<column name="TRANSACTIONID" not-null="true"></column>
+		</many-to-one>  -->
+		
+<!--  
+		<many-to-one name="transactionId" column="TRANSACTIONID"
+			class="Transaction" not-null="true">
+		</many-to-one>
+-->
+
+	</class>
+</hibernate-mapping>

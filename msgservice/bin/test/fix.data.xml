@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<field name="interfaceName" len="25">ICBC_PERBANK_B2C</field>
+	<field name="interfaceVersion" len="25">1.0.0.0</field>
+	<field name="orderid" len="25">000000001</field>
+	<field name="amount" len="25">100</field>
+	<field name="curType" len="25">001</field>
+	<field name="merID" len="25">0200EC20000012</field>
+	<field name="merAcct" len="25">0200029109000030106</field>
+	<field name="verifyJoinFlag" len="25">0</field>
+	<field name="notifyType" len="25">AG</field>
+	<field name="merURL" len="25">http://www.geticbcmsg.com</field>
+	<field name="resultType" len="25">0</field>
+	<field name="goodsID" len="25">abcd001</field>
+	<field name="goodsName" len="24">asdf</field>
+	<field name="goodsNum" len="25">1</field>
+	<field name="carriageAmt" len="25">100</field>
+	<field name="merHint" len="24">asdfasdf</field>
+	<field name="orderDate" len="25">20050801192556</field>
+	<field name="remark1" len="25" />
+	<field name="remark2" len="25" />
+</msg>

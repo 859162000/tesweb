@@ -1,0 +1,16 @@
+#! /bin/sh
+# 以下内容用于导出符号表
+os=`uname -s`
+if [ "$os" = "AIX" ] 
+then
+
+exp_file=$1
+shift
+
+/usr/vac/bin/CreateExportList -X64 exp.lst $*
+echo "#!." > $exp_file
+cat exp.lst >> $exp_file
+rm -f exp.lst
+echo Create $exp_file OK!
+
+fi

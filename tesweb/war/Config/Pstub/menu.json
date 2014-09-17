@@ -1,0 +1,40 @@
+﻿[
+{
+	Desc:'系统管理',
+	Icon:'dctheme/Image/menu/1.png',
+	Role:'10',
+	TabItem:[],
+	Child:[{
+		Desc:'模拟系统管理',
+		Icon:'dctheme/Image/menu/1-1.png',
+		Role:'10',
+		TabItem:[{Name:'SimuSys',TabTitle:'模拟系统管理'}],
+		Child:[]
+	},{
+		Desc:'用户管理',
+		Icon:'dctheme/Image/menu/1-2.png',
+		Role:'10',
+		TabItem:[{Name:'User',TabTitle:'用户管理'}],
+		Child:[]
+	},{
+		Desc:'用户授权',
+		Icon:'dctheme/Image/menu/1-3.png',
+		Role:'10',
+		TabItem:[{Name:'UserSys',TabTitle:'用户授权'}],
+		Child:[]
+	}]
+ },
+ {
+	Desc:'交易管理',
+	Icon:'dctheme/Image/menu/2.png',
+	Role:'11',
+	TabItem:[],
+	Child:[{
+		Desc:'接收方交易',
+		Icon:'dctheme/Image/menu/2-1.png',
+		Role:'11',
+		TabItem:[{Name:'TranRecv',TabTitle:'接收方交易'}],
+		Child:[]
+	}]
+ }
+]

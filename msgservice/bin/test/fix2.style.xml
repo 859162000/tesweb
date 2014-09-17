@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="utf-8">
+        <format>`SC`%[len='4',align='right',fillingChar='0',radix='16']s%s%s%s12345678</format>
+        <param>lm+lr.3+-1</param>
+        <param>m</param>
+        <param>b.1</param>
+        <param>s.space</param>
+    </Document>
+
+    <Stru>
+        <format>%s</format>
+        <param>m</param>
+    </Stru>
+    <FieldInStru>
+        <format>%[align='left',fillingChar=' ']s</format>
+        <param>v</param>
+    </FieldInStru>
+    <Field>
+        <format>%s=%[ignoreLen='true']s,</format>
+        <param>n</param>
+        <param>v</param>
+    </Field>
+
+    <Special target="ID">
+        <format>ACK: %[ignoreLen='true']s:</format>
+        <param>v</param>
+    </Special>
+
+    <Script name="space"><![CDATA[
+        int len = (4 - (item.getParent().getAttribute("__tes__internal__m").getBytes().length-1) % 4) % 4;
+        return new Value("    ".substring(0, len));
+    ]]></Script>
+</Format>

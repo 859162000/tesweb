@@ -1,0 +1,9 @@
+include ./baselib.mk
+all:comm.o clean
+comm.o:comm.c
+	@echo '====Now Start to Rebuild comm.o    ===='
+	gcc -c -DLINUX -I$(BASEINC) -g -w comm.c
+	ar -rv $(BASELIB)/libTCPcomm.a comm.o
+	@echo '====Rebuild libTCPcomm.a successfully    ===='
+clean:	
+	rm comm.o

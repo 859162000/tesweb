@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Users/songlj/Desktop/jar/TESAdapterHelper.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/TESAdapterHelper/commenmy.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="true" manifestLocation="/msgservice/msgservice.manifest" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.net.jre14{ReplyMessage.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.framework{AbstractAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.net.jre14{MessageType.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter{IReplyAdapterWorker.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.context{IReplyAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter{IRequestAdapterWorker.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.remote{AbstractAdapterHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.net.jre14{Message.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter{IAdapter.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.remote{DefaultRequestAdapterHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.context{IRequestAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.net.jre14{MessageItem.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.helper{IReplyAdapterHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.startup.remote{StartUpRemoteForReply.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.framework{DefaultRequestAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.remote{DefaultRequestAdapterServerWorker.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.context{IAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.framework{AbstractRequestAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter{IReplyAdapter.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.remote{DefaultReplyAdapterHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.startup.remote{StartUpRemoteForRequest.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.util{PlogData.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.framework{DefaultReplyAdapterEnvContext.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.util{ConfigHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.helper{IRequestAdapterHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.helper{IAdapterHelper.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.startup{StartUpEntry.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.startup{IStartUp.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter{IRequestAdapter.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.startup.remote{StartUpRemote.java"/>
+<javaElement handleIdentifier="=TESAdapterHelper/src&lt;com.dc.tes.adapter.util{RequestListLocal.java"/>
+</selectedElements>
+</jardesc>

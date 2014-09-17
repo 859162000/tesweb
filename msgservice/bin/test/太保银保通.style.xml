@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format><![CDATA[<?xml version="1.0"?>%{0D 0A}<TXLife>%s</TXLife>]]></format>
+		<param>m</param>
+	</Document>
+
+	<Field>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>%{0D 0A}]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</Field>
+	<FieldInArray>
+		<format><![CDATA[<%s%s>%[ignoreLen='true']s</%s%s>%{0D 0A}]]></format>
+		<param>n</param>
+		<param>mi+1</param>
+		<param>v</param>
+		<param>n</param>
+		<param>mi+1</param>
+	</FieldInArray>
+	<FieldInStru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>%{0D 0A}]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInStru>
+	<FieldInStruArray>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>%{0D 0A}]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInStruArray>
+
+	<Stru>
+		<format><![CDATA[<%s>%{0D 0A}%[ignoreLen='true']s</%s>%{0D 0A}]]></format>
+		<param>n</param>
+		<param>m</param>
+		<param>n</param>
+	</Stru>
+
+	<Array>
+		<format>%s</format>
+		<param>m</param>
+	</Array>
+	<ArrayOfStru>
+		<format>%s</format>
+		<param>m</param>
+	</ArrayOfStru>
+
+	<StruInArray>
+		<format><![CDATA[<%s%s>%{0D 0A}%[ignoreLen='true']s</%s%s>%{0D 0A}]]></format>
+		<param>n</param>
+		<param>mi+1</param>
+		<param>m</param>
+		<param>n</param>
+		<param>mi+1</param>
+	</StruInArray>
+</Format>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<struct name="pub">
+		<field name="TransCode" desc="交易代码" />
+		<field name="CIS" desc="集团CIS号" />
+		<field name="BankCode" desc="归属银行编号" />
+		<field name="ID" desc="证书ID" />
+		<field name="TranDate" desc="交易日期" />
+		<field name="TranTime" desc="交易时间" />
+		<field name="fSeqno" desc="指令包序列号" />
+	</struct>
+	<struct name="in">
+		<field name="TotalNum" desc="总笔数" />
+		<field name="BillNo" isarray="true" desc="票据号码" />
+		<field name="KeepType" desc="托管状态" />
+		<field name="TranType" desc="指令类型" />
+		<field name="SMutDate" desc="票据到期起始日期" />
+		<field name="EMutDate" desc="票据到期截止日期" />
+		<field name="BeginTime" desc="开始时间" />
+		<field name="EndTime" desc="终止时间" />
+		<field name="ReqReserved1" desc="请求备用字段1" />
+		<field name="ReqReserved2" desc="请求备用字段2" />
+		<struct name="rd" isarray="true">
+			<field name="iSeqno" desc="指令顺序号" />
+			<field name="HolderName" desc="持票人户名" />
+			<field name="HolderAccNo" desc="持票人账号" />
+			<field name="ReqReserved3" desc="请求备用字段3" />
+			<field name="ReqReserved4" desc="请求备用字段4" />
+		</struct>
+	</struct>
+</msg>

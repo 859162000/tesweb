@@ -1,0 +1,9 @@
+start tpsvrinit
+test11:init ok!
+test11:set env ok!
+test12:start api reg2tes!
+test12:start sendTcpS,regC=[       REG000000105400000000580000000007SIMTYPE0000000001S]!
+test12:sendTcps OK!
+test11:reg2tes ret=[593]
+test11:reg2tes ok!
+test11:write cfg file ok!

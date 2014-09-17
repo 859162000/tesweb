@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="RecCode" table="t_reccode">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="NAME" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="type" column="TYPENAME" />
+		<property name="classname" column="CLASSNAME" />
+		
+		<!--  
+		<property name="parameter1" column="PARAMETER1" />
+		<property name="parameter2" column="PARAMETER2" />
+		<property name="parameter3" column="PARAMETER3" />
+		<property name="parameter4" column="PARAMETER4" />
+		<property name="parameter5" column="PARAMETER5" />
+		<property name="parameter6" column="PARAMETER6" />
+		-->
+		
+		<property name="cfginfo" column="CFGINFO" />
+		
+		 <set name="channel" table="t_channel" inverse="false" lazy="false" cascade="all">
+			<key>
+				<column name="RECCODEID" />
+			</key>
+			<one-to-many class="Channel" />
+		</set>
+
+	</class>
+</hibernate-mapping>

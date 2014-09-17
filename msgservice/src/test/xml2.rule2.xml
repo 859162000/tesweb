@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format><![CDATA[<?xml version="1.0"?>%s]]></format>
+		<param>m</param>
+	</Document>
+
+	<Stru>
+		<format><![CDATA[<Struct name="%s">%s</Struct>]]></format>
+		<param>n</param>
+		<param>m</param>
+	</Stru>
+
+	<Field>
+		<format><![CDATA[<Field name="%s">%s</Field>]]></format>
+		<param>n</param>
+		<param>v</param>
+	</Field>
+	
+	<FieldInStru>
+		<format><![CDATA[<Field name="%s">%s</Field>]]></format>
+		<param>n</param>
+		<param>v</param>
+	</FieldInStru>
+</Format>

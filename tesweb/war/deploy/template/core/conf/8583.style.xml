@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Format>
+	<Document encoding="gb2312">
+		<format>
+			%b%s%s
+		</format>
+		<param>c.tranCode</param>
+		<param>s.BitMap</param>
+		<param>m</param>
+	</Document>
+
+	<Field usage="format=DATA;type=B">
+		<format>%B</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=B">
+		<format>%[len='2',align='right']b%[ignoreLen='true']B</format>
+		<param>lr.1</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=B">
+		<format>%[len='2',align='right']b%[ignoreLen='true']B</format>
+		<param>lr.1</param>
+		<param>v</param>
+	</Field>
+	
+	<Field usage="format=DATA;type=int">
+		<format>%b</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=int">
+		<format>%[len='2',align='right']b%[ignoreLen='true',align='left']b</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=int">
+		<format>%[len='2',align='right']b%[ignoreLen='true',align='left']b</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=DATA;type=string">
+		<format>%[align='right',fillingChar=' ']s</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=string">
+		<format>%[len='2',align='right']b%[ignoreLen='true']s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=string">
+		<format>%[len='2',align='right']b%[ignoreLen='true']s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+
+	<Script name="BitMap"><![CDATA[
+		int[] bm = new int[16];
+		boolean extBm = false;
+
+		for (MsgItem i : item.getDocument()) {
+                                     if(i instanceof MsgField){ 
+		         if(((MsgField)i).value().isEmpty() && i.getAttribute("defaultValue").getStr().isEmpty()){
+                                               continue;
+                                         }
+		      }
+
+			int pos = Integer.parseInt(i.getAttribute("name").getStr().substring(1));
+
+			if (pos == 1) 
+				continue;
+			if (pos > 64)
+				extBm = true;
+
+			bm[(pos - 1) / 8] |= 1 << ((8 - pos % 8) % 8);
+		}
+
+		if (extBm)
+			bm[0] |= 1 << 7;
+
+		byte[] bytes = extBm ? new byte[16] : new byte[8];
+		for (int i = 0; i < bytes.length; i++)
+			bytes[i] = PackUtils.WriteInt16(bm[i], false)[0];
+
+		return new Value(bytes);
+	]]>
+	</Script>
+<Script name="tranCode"><![CDATA[
+String tranCode = context.getGlobalContext().getTranCode();
+tranCode = String.valueOf(Integer.parseInt(tranCode) + 1);
+return new Value(tranCode);
+]]></Script>
+</Format>

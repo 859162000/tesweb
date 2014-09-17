@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="gb2312"?>
+<conf>
+	<mode1>
+		<req>
+		<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+		<field>
+			<property name="name" displayName="名称" list="" default="field_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="字段类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+
+		</field>
+		<struct>
+			<property name="name" displayName="名称" list="" default="struct_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="结构类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</struct>
+	</req>
+	<resp>
+		<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+		<field>
+			<property name="name" displayName="名称" list="" default="field_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="字段类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</field>
+		<struct>
+			<property name="name" displayName="名称" list="" default="struct_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="结构类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</struct>
+	</resp>
+	</mode1>
+	<mode0>
+		<req>
+		<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+		<field>
+			<property name="name" displayName="名称" list="" default="field_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="字段类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</field>
+		<struct>
+			<property name="name" displayName="名称" list="" default="struct_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="结构类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</struct>
+	</req>
+	<resp>
+		<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+		<field>
+			<property name="name" displayName="名称" list="" default="field_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="字段类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</field>
+		<struct>
+			<property name="name" displayName="名称" list="" default="struct_demo" width="150" />
+			<property name="desc" displayName="描述" list="" default="结构类型" width="100" />
+			<property name="attr" displayName="属性" list="" default="" width="50" />
+			<property name="optional" displayName="可空" list="" default="字段类型" width="100" />
+			<property name="isarray" displayName="数组" list="" default="字段类型" width="100" />
+<property name="variable" displayName="变量" list="" default="字段类型" width="100" />
+<property name="format" displayName="格式" list="" default="字段类型" width="100" />
+		</struct>
+	</resp>
+	</mode0>
+</conf>

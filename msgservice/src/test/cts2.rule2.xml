@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format>%s</format>
+		<param>f.test.FormatTest.unpack</param>
+	</Document>
+
+	<Script name="unpack"><![CDATA[
+		int pos = context.pos, pos2;
+		byte[] SOH = { 1 };
+
+		// colCount
+		pos2 = ByteArrayUtils.IndexOf(context.bytes, SOH, pos);
+		String colCountStr = new String(ByteArrayUtils.SubArray(context.bytes, pos, pos2 - pos), context.spec.encoding);
+		pos = pos2 + 1;
+		int colCount = Integer.parseInt(colCountStr);
+
+		// rowCount
+		pos2 = ByteArrayUtils.IndexOf(context.bytes, SOH, pos);
+		String rowCountStr = new String(ByteArrayUtils.SubArray(context.bytes, pos, pos2 - pos), context.spec.encoding);
+		pos = pos2 + 1;
+		int rowCount = Integer.parseInt(rowCountStr);
+
+		// title
+		String[] title = new String[colCount];
+		for (int i = 0; i < colCount; i++) {
+			pos2 = ByteArrayUtils.IndexOf(context.bytes, SOH, pos);
+			title[i] = new String(ByteArrayUtils.SubArray(context.bytes, pos, pos2 - pos), context.spec.encoding);
+			pos = pos2 + 1;
+		}
+
+		// body
+		MsgDocument doc = (MsgDocument) item;
+		MsgArray root = new MsgArray();
+		doc.put("root", root);
+
+		for (int i = 0; i < rowCount; i++) {
+			MsgStruct stru = new MsgStruct();
+			stru.setAttribute("name", "root");
+			stru.setAttribute("isarray", true);
+
+			for (int j = 0; j < colCount; j++) {
+				pos2 = ByteArrayUtils.IndexOf(context.bytes, SOH, pos);
+				String data = new String(ByteArrayUtils.SubArray(context.bytes, pos, pos2 - pos), context.spec.encoding);
+				pos = pos2 + 1;
+
+				MsgField field = new MsgField();
+				field.setAttribute("name", title[j]);
+				field.set(data);
+				stru.put(title[j], field);
+			}
+			root.add(stru);
+		}
+
+		context.length = context.bytes.length - context.pos;
+		return true;
+	]]></Script>
+</Format>

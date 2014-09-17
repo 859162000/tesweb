@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="utf-8">
+        <format>%s</format>
+        <param>s.Parse</param>
+    </Document>
+
+    <Script name="Parse" target="" usage="Unpack">
+        <import>java.io.IOException</import>
+        <import>java.io.ByteArrayInputStream</import>
+        <import>java.io.StringReader</import>
+        <import>org.xml.sax.InputSource</import>
+        <import>org.xml.sax.SAXException</import>
+        <import>org.xml.sax.XMLReader</import>
+        <import>org.xml.sax.ext.DefaultHandler2</import>
+        <import>org.xml.sax.helpers.XMLReaderFactory</import>
+        <![CDATA[
+        final MsgDocument doc = (MsgDocument) item;
+
+		InputSource source = new InputSource(new ByteArrayInputStream(bytes));
+		XMLReader reader = XMLReaderFactory.createXMLReader();
+		DefaultHandler2 handler = new DefaultHandler2() {
+			private String m_value = "";
+
+			@Override
+			public void characters(char[] ch, int start, int length) throws SAXException {
+				m_value += new String(ch, start, length);
+			}
+
+			@Override
+			public void endElement(String uri, String localName, String name) throws SAXException {
+				this.m_value = this.m_value.trim();
+
+				if (this.m_value.contains("<?xml")) {
+					final MsgStruct stru = new MsgStruct();
+					stru.setAttribute("name", new Value("SvcCont"));
+
+					InputSource source = new InputSource(new StringReader(m_value));
+					XMLReader reader = XMLReaderFactory.createXMLReader();
+					DefaultHandler2 handler = new DefaultHandler2() {
+						private String m_value = "";
+
+						@Override
+						public void characters(char[] ch, int start, int length) throws SAXException {
+							m_value += new String(ch, start, length);
+						}
+
+						@Override
+						public void endElement(String uri, String localName, String name) throws SAXException {
+							MsgField f = new MsgField();
+                            f.setAttribute("name", localName);
+                            f.set(m_value.trim());
+                            
+                            stru.put(localName, f);
+							m_value = "";
+						}
+					};
+
+					reader.setContentHandler(handler);
+					try {
+						reader.parse(source);
+					} catch (IOException ex) {
+						throw new SAXException(ex);
+					}
+
+					doc.put("SvcCont", stru);
+				} else if (!localName.equals("ProvBOSS")) {
+                    MsgField f = new MsgField();
+                    f.setAttribute("name", localName);
+                    f.set(m_value.trim());
+					doc.put(localName, f);
+                }
+
+				m_value = "";
+			}
+		};
+
+		// 进行解析
+		reader.setContentHandler(handler);
+		reader.parse(source);
+
+		return bytes.length;
+    ]]></Script>
+</Format>

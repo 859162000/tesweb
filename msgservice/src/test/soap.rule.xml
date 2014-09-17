@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Filter method="regex">
+		<regex><![CDATA[\>(\s+)\<]]></regex>
+		<group>1</group>
+	</Filter>
+
+	<Filter method="border">
+		<left><![CDATA[<?]]></left>
+		<right><![CDATA[<TXLife>]]></right>
+		<nestLeft>true</nestLeft>
+		<nestRight>false</nestRight>
+	</Filter>
+	<Filter method="border">
+		<left><![CDATA[</TXLife>]]></left>
+		<right><![CDATA[</soapenv:Envelope>]]></right>
+		<nestLeft>false</nestLeft>
+		<nestRight>true</nestRight>
+	</Filter>
+
+	<Lex target="v"><![CDATA[[^<]*]]></Lex>
+	<Lex target="n">[a-zA-Z]+</Lex>
+	<Lex target="mi">[0-9]+</Lex>
+
+	<Property>
+		<discardStru>true</discardStru>
+	</Property>
+
+	<Document encoding="gb2312">
+		<format><![CDATA[<TXLife>%s</TXLife>]]></format>
+		<param>m</param>
+	</Document>
+
+	<Field>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</Field>
+	<Field>
+		<format><![CDATA[<%s%s>%[ignoreLen='true']s</%s%s>]]></format>
+		<param>n</param>
+		<param>mi</param>
+		<param>v</param>
+		<param>n</param>
+		<param>mi</param>
+	</Field>
+	<FieldInStru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInStru>
+	<FieldInStru>
+		<format><![CDATA[<%s%s>%[ignoreLen='true']s</%s%s>]]></format>
+		<param>n</param>
+		<param>mi</param>
+		<param>v</param>
+		<param>n</param>
+		<param>mi</param>
+	</FieldInStru>
+
+	<Stru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>m</param>
+		<param>n</param>
+	</Stru>
+
+	<Stru>
+		<format><![CDATA[<%s%s>%[ignoreLen='true']s</%s%s>]]></format>
+		<param>n</param>
+		<param>mi</param>
+		<param>m</param>
+		<param>n</param>
+		<param>mi</param>
+	</Stru>
+</Format>
+
+

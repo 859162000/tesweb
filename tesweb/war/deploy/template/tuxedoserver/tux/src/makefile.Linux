@@ -1,0 +1,47 @@
+
+
+SHELL=/bin/sh
+
+CC=gcc
+CCC=gcc
+LD=ld 
+AR=ar 
+
+.SUFFIXES: .cpp .so .o .c
+
+.cpp.o          :
+	$(CCC) $(CPPFLAGS) -c $<
+
+.c.o:
+	${CC} ${CFLAGS} -c $<
+
+.o.so           :
+	$(CCC) $(LDFLAGS) $< -G -o $@
+
+BASELIB=${HOME}/lib/liblinux
+BASEINC=${HOME}/tux/include
+
+CPPFLAGS=-I${TUXDIR}/include -I${BASEINC} -I${HOME}/inc -I.  -DLINUX
+CFLAGS=${CPPFLAGS} 
+LIBS=
+LDFLAGS= -L${BASELIB} 
+ARFLAGS=rv
+
+OBJS= TuxEntry.o pub.o 
+BINS=	TuxEntry 
+
+all: ${BINS} TuxSec.so clean
+
+TuxEntry: TuxEntry.o pub.o
+	CC=${CCC} buildserver -o $@ -f "$?" -l "${LDFLAGS} -lapitcps32 -lUtil" \
+	-s "TuxEntry"
+	rm -f "$?"
+
+TuxSec.so:TuxSec.o
+	$(CC) -fPIC -shared -o $@  $?
+
+clean:
+	rm -f ${OBJS}
+	mv  ${BINS} ../bin
+	mv TuxSec.so $(HOME)/lib/liblinux
+

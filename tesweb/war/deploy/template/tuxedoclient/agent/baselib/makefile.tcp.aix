@@ -1,0 +1,9 @@
+include ./baselib.mk
+all:comm.o clean
+comm.o:comm.c
+	@echo '====Now Start to Rebuild comm.o    ===='
+	cc -c -I$(BASEINC) -g -w -wx -q64 comm.c
+	ar -X64 -rv $(BASELIB)/libTCPcomm.a comm.o
+	@echo '====Rebuild libTCPcomm.a successfully    ===='
+clean:	
+	rm comm.o

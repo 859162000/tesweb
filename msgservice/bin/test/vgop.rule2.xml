@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Filter method="Regex" regex="\&gt;(\s+)\&lt;" group="1" />
+
+    <Lex target="n">[a-zA-Z]+</Lex>
+
+    <Document encoding="utf-8">
+        <format>
+            <![CDATA[<?xml version="1.0" encoding="utf-8"?><ProvBOSS>%s</ProvBOSS>]]>
+        </format>
+        <param>m</param>
+    </Document>
+
+    <Stru>
+        <format>
+            <![CDATA[<%s><![CDATA[<?%s?>%s%{5D}]></%s>]]>
+        </format>
+        <param>n</param>
+        <param></param>
+        <param>m</param>
+        <param>n</param>
+    </Stru>
+    <Stru>
+        <format>
+            <![CDATA[<%s><![CDATA[]></%s>]]>
+        </format>
+        <param>n</param>
+        <param>n</param>
+    </Stru>
+    <Stru>
+        <format>
+            <![CDATA[<%s>%s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>m</param>
+        <param>n</param>
+    </Stru>
+
+    <StruInArray>
+        <format>
+            <![CDATA[<%s>%s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>m</param>
+        <param>n</param>
+    </StruInArray>
+
+    <Field>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </Field>
+    <FieldInStru>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInStru>
+    <FieldInStruArray>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInStruArray>
+</Format>

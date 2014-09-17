@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Channel" table="t_channel">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="NAME" />
+		
+		<!-- <property name="adapterid" column="ADAPTERID" />   -->
+		<many-to-one name="adapter" class="Adapter" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="ADAPTERID" not-null="true" ></column>
+		</many-to-one>
+		
+		<!--  <property name="reccodeid" column="RECCODEID" /> -->
+		<many-to-one name="reccode" class="RecCode" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="RECCODEID" not-null="false" ></column>
+		</many-to-one>
+		
+		<!--  <property name="packid" column="PACKID" /> -->
+		<many-to-one name="packchannel" class="Pack" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="PACKID" not-null="false" ></column>
+		</many-to-one>
+		
+		<!--  <property name="unpackid" column="UNPACKID" /> -->
+		<many-to-one name="unpackchannel" class="Pack" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="UNPACKID" not-null="false" ></column>
+		</many-to-one>
+		
+		
+		<!--  <property name="defaultfalg" column="DEFAULTFLAG" /> -->
+		
+		
+		<property name="sendadapterip" column="SENDADAPTERIP" />
+		<property name="sendadapterport" column="SENDADAPTERPORT" />
+		<property name="adaptercfginfo" column="ADAPTERCFGINFO" />
+		<property name="reccodecfginfo" column="RECCODECFGINFO" />
+
+		<property name="systemid" column="SYSTEMID" />
+		<property name="channeltype" column="CHANNELTYPE" />
+
+	</class>
+</hibernate-mapping>

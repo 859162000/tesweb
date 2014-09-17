@@ -1,0 +1,16 @@
+<module>
+
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.extjs.gxt.ui.GXT'/>
+	<inherits name='com.extjs.gxt.charts.Chart'/>
+	<inherits name='com.google.gwt.json.JSON'/>
+	<inherits name="com.google.gwt.xml.XML" />
+	
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class='com.dc.tes.ui.client.MainPage'/>
+  	<inherits name='com.extjs.gxt.themes.Themes' />
+  	<!--<inherits name="com.google.gwt.user.theme.standard.Standard"/>-->
+  	<!-- <inherits name="com.google.gwt.user.theme.chrome.Chrome"/> -->
+  	<!-- <inherits name="com.google.gwt.user.theme.dark.Dark"/> -->
+  	
+</module>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+    <field name="interfaceName">ICBC_PERBANK_B2C</field>
+    <field name="interfaceVersion">1.0.0.0</field>
+    <field name="orderid">000000001</field>
+    <field name="amount">100</field>
+    <field name="curType">001</field>
+    <field name="merID">0200EC20000012</field>
+    <field name="merAcct">0200029109000030106</field>
+    <field name="verifyJoinFlag">0</field>
+    <field name="notifyType">AG</field>
+    <field name="merURL">http://www.geticbcmsg.com.cn/servlet</field>
+    <field name="resultType">0</field>
+    <field name="goodsID">abcd001</field>
+    <field name="goodsName">小毡帽</field>
+    <field name="goodsNum">1</field>
+    <field name="carriageAmt">100</field>
+    <field name="merHint">跳楼甩卖！</field>
+    <field name="orderDate">20050801192556</field>
+    <field name="remark1" />
+    <field name="remark2" />
+</msg>

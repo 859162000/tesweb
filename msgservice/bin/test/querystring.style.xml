@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="gb2312">
+        <format>%s%s</format>
+        <param>m</param>
+        <param>b.1</param>
+    </Document>
+
+    <Field>
+        <format>%s=%[ignoreLen='true']s&amp;</format>
+        <param>n</param>
+        <param>v</param>
+    </Field>
+</Format>

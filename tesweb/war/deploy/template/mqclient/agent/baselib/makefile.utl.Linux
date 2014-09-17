@@ -1,0 +1,9 @@
+include ./baselib.mk
+all:Util.o clean
+Util.o:Util.c 
+	@echo '====Now Start to Rebuild Util.o    ===='
+	gcc -c -DLINUX -I$(BASEINC) -g -w  Util.c 
+	ar -rv $(BASELIB)/libUtil.a Util.o
+	@echo '====Rebuild  libUtil.a successfully    ===='
+clean:	
+	rm Util.o

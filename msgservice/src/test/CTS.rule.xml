@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format><![CDATA[<?xml version="1.0"?><Root>%s</Root>]]></format>
+		<param>m</param>
+	</Document>
+
+	<Lex target="v"><![CDATA[[^<]*]]></Lex>
+
+	<Field>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</Field>
+
+	<FieldInStru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInStru>
+
+	<Stru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>m</param>
+		<param>n</param>
+	</Stru>
+</Format>

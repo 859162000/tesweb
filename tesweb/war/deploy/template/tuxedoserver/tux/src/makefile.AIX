@@ -1,0 +1,42 @@
+
+
+SHELL=/bin/sh
+
+CC=cc 
+CCC=xlC 
+LD=ld 
+AR=ar 
+
+.SUFFIXES: .cpp .so .o .c
+
+.cpp.o          :
+	$(CCC) $(CPPFLAGS) -c $<
+
+.c.o:
+	${CC} ${CFLAGS} -c $<
+
+.o.so           :
+	$(CCC) $(LDFLAGS) $< -G -o $@
+
+SAMPLIB=${HOME}/tux/server/lib
+SAMPINC=${HOME}/tux/server/include
+
+CPPFLAGS=-I${TUXDIR}/include -I${SAMPINC} -I.  -qcpluscmt -DAIX
+CFLAGS=${CPPFLAGS} -g
+LIBS=
+LDFLAGS= -L${SAMPLIB} -L${HOME}/lib
+ARFLAGS=rv
+
+OBJS= TuxEntry.o pub.o 
+BINS=	TuxEntry 
+
+all: ${BINS}
+
+TuxEntry: TuxEntry.o pub.o ../lib/libcsspui.so
+	CC=xlC buildserver -o $@ -f "$?" -l "${LDFLAGS} -lapis32" \
+	-s "TuxEntry"
+	rm -f "$?"
+	mv -f $@ ../bin/.
+clean:
+	rm -f ${OBJS} ${BINS}
+

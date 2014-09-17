@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<msg>
+    <struct name="消息头">
+        <field name="版本号" len="4"></field>
+        <field name="终端标志" len="4"></field>
+        <field name="服务名" len="8"></field>
+        <field name="预留4位" len="4"></field>
+    </struct>
+    <struct name="会话头">
+        <field name="会话ID" len="8"></field>
+        <field name="会话控制字" len="6"></field>
+        <field name="预留4位" len="4"></field>
+    </struct>
+    <struct name="事务头">
+        <field name="事务ID" len="8"></field>
+        <field name="事务控制字" len="6"></field>
+        <field name="预留4位" len="4"></field>
+    </struct>
+    <field name="命令码"></field>
+    <field name="NUMLIST"></field>
+    <field name="NUMTYPE"></field>
+</msg>

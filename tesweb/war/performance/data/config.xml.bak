@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Monitor>
+	<webserviceurl>http://localhost:12487/MoniService/MoniWebService.asmx?wsdl</webserviceurl>
+</Monitor>

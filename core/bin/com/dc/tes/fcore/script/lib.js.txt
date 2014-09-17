@@ -1,0 +1,220 @@
+
+// 内部工具函数 用于将一些控制信息附加到简单的数据json上，从而形成一个报文
+function __msg(json, tranCode, caseName, channel, t) {
+	var msg = eval("(" + json + ")");	// 生成报文的本体
+	msg[".tranCode"] = tranCode;	// 向报文附加交易码
+	msg[".caseName"] = caseName;	// 向报文附加案例名称
+	msg[".channel"] = channel;		// 向报文附加通道名称
+	msg[".thread"] = t;				// 向报文附加接收该请求的线程
+	msg[".delay"] = 0;				// 默认延时时间 0ms
+	return msg;
+}
+
+// 构造IN变量
+var IN = __msg(_IN, ENV.tranCode, undefined, ENV.channel);
+// 构造OUT变量
+var OUT = __msg(_OUT, ENV.tranCode, ENV.caseName, ENV.channel);
+// 构造REG变量
+var REG = eval("(" + _REG + ")");
+// 构造LOG变量
+var LOG = ENV.log;
+
+// 装载报文
+//	@tranCode	交易码
+//	@caseName	案例名称
+//	@[mode]		交易类型 可选 为ENV.CLIENT或ENV.SERVER两者之一
+// 返回指定的案例报文
+function load(tranCode, caseName, mode) {
+	if(!tranCode) throw "向load()方法提供的[tranCode]参数不得为空."
+	if(!caseName) throw "向load()方法提供的[caseName]参数不得为空."
+	
+	mode = mode || "";
+	switch(mode) {
+		case "Client":
+			mode = ENV.MODE_CLIENT;
+			break;
+		case "Server":
+			mode = ENV.MODE_SERVER;
+			break;
+		case "":
+			mode = null;
+			break;
+		default:
+			throw "向load()方法提供的[mode]参数的值必须为'Client'或'Server'，或为空"
+	}
+	
+	
+	var msg = ENV.load(tranCode, caseName, mode);
+	
+	return __msg(msg, tranCode, caseName);
+}
+
+// 装载报文
+//	@tranCode	交易码
+//	@caseName	案例名称
+//	@[mode]		交易类型 可选 为ENV.CLIENT或ENV.SERVER两者之一
+// 返回指定的案例报文
+function loadByCaseNo(tranCode, caseNo, mode) {
+	if(!tranCode) throw "向loadByCaseNo()方法提供的[tranCode]参数不得为空."
+	if(!caseNo) throw "向loadByCaseNo()方法提供的[caseNo]参数不得为空."
+	
+	mode = mode || "";
+	switch(mode) {
+		case "Client":
+			mode = ENV.MODE_CLIENT;
+			break;
+		case "Server":
+			mode = ENV.MODE_SERVER;
+			break;
+		case "":
+			mode = null;
+			break;
+		default:
+			throw "向loadByCaseNo()方法提供的[mode]参数的值必须为'Client'或'Server'，或为空"
+	}
+	
+	
+	var msg = ENV.loadByCaseNo(tranCode, caseNo, mode);
+	
+	return __msg(msg, tranCode, caseNo);
+}
+
+// 将指定名称的案例装载到OUT变量中
+//	@caseName	要装载的案例名称
+// 该函数无返回值
+function use(caseName) {
+	if(!caseName) throw "向use()方法提供的[caseName]参数不得为空."
+	
+	OUT = load(ENV.tranCode, caseName, "Server");
+	OUT[".channel"] = ENV.channel;
+}
+
+// 向被测系统发送报文
+//	@msg		要向被测系统发送的报文
+//	@channel	发送此报文时使用的通道
+//	@[timeout]	超时时间 可选 默认无超时
+// 返回被测系统返回的响应
+function send(msg, mode, channel, timeout) {
+	if(!msg) throw "向send()方法提供的[msg]参数不得为空."
+	
+	mode = mode || "";
+	switch(mode) {
+		case "Client":
+			mode = ENV.MODE_CLIENT;
+			break;
+		case "Server":
+			mode = ENV.MODE_SERVER;
+			break;
+		case "":
+			mode = null;
+			break;
+		default:
+			throw "向load()方法提供的[mode]参数的值必须为'Client'或'Server'，或为空"
+	}
+	
+	if(!channel) throw "向send()方法提供的[channel]参数不得为空."	
+	timeout = timeout == undefined ? 0 : timeout;
+
+	var resp = ENV.send(msg, mode, msg[".channel"] = channel, timeout);
+	if(resp != null){
+		return __msg(resp.data, resp.tranCode, undefined, resp.channel); 
+	}
+}
+
+// 监听被测系统发来的报文
+//		调用此函数后当前执行过程会被阻塞，直到被测系统在发来了一笔被监听的交易，或超过了超时时间。
+//	@tranCode	要监听的请求交易码
+//	@[channel]	进行监听的通道 可选 默认在所有通道上进行监听
+//	@[timeout]	超时时间 可选 默认无超时
+//	@[matcher]	一个函数 用于判断listen到的报文是不是想要接到的报文
+//					如果listen到的报文不是想要的 则返回false 这时执行点会回到listen()中继续等待下一个报文
+//					该函数应有一个参数 表示接收到的报文
+// 返回被测系统发来的报文
+function listen(tranCode, channel, timeout, matcher) {
+	if(!tranCode) throw "向listen()方法提供的[tranCode]参数不得为空."
+	channel = channel ? channel : null;
+	timeout = timeout ? timeout : 0;
+	
+	while(1) {
+		var req = ENV.listen(tranCode, channel, timeout);
+		msg = __msg(req.data, req.tranCode, undefined, req.channel, req.t);
+		
+		var matches = (matcher || function(){})(msg);
+		
+		if (matches === false)
+			ENV.reject(req["in"]);
+		else
+			return msg;
+	}
+}
+
+// 对被测系统发来的请求进行响应
+//		特别地，该函数可以对IN变量进行响应。
+//	@req	请求报文 该参数可以为listen()接收到的报文，也可以为IN变量
+//	@resp	响应报文 该参数可以为单一的返回报文，也可以为一个包含返回报文列表的数组
+// 该函数无返回值
+function reply(req, resp, delay) {
+	if(!req) throw "向reply()方法提供的[req]参数不得为空."
+	if(!resp) throw "向reply()方法提供的[resp]参数不得为空."
+	if(!req[".channel"]) throw "向reply()方法提供的[req]参数不包含请求通道信息."
+	if(req[".replyFlag"]) throw "向reply()方法提供的[resp]参数已经被回复过. 不能多次回复同一个请求.";
+	
+	delay = delay ? delay : 0;
+	
+	if(typeof resp.length != "number") {
+		// 普通的回复 用一条响应回复一条请求
+		resp[".channel"] = req[".channel"];
+		
+		ENV.reply(req[".channel"], req[".thread"] ? req[".thread"] : null, resp, delay);
+		req[".replyFlag"] = true;
+	} else {
+		// 用多条响应回复一条请求
+		for( var i = 0; i < resp.length; i++ )
+			resp[i][".channel"] = req[".channel"];
+		
+		ENV.reply(req[".channel"], req[".thread"] ? req[".thread"] : null, resp, delay);
+		req[".replyFlag"] = true;
+	}
+}
+
+// 格式化日期
+//	@[pattern]	日期格式。可选，默认为yyyy-MM-dd hh:mm:ss
+//	@[date]		要格式化的日期对象。可选，默认为当前时间。
+// 返回给定时间的按照给定格式的字符串表示
+function time(pattern, date) {
+	pattern = pattern || "yyyy-MM-dd hh:mm:ss";
+	date = date || new Date();
+	return ENV.time(pattern, date);
+}
+
+// 设置延时
+//	@delay		延时时间 单位为ms
+// 该函数无返回值
+function delay(delay) {
+	if(!delay) throw "向delay()方法提供的[delay]参数不得为空."
+	OUT[".delay"] = delay;
+}
+
+//打印日志
+//logmsg 日志内容
+function mlog(logmsg){
+	ENV.flowLog(logmsg);
+}
+
+
+//求余
+//返回余数
+function random_channel_no(TotalChannelCount){
+	return ENV.random_channel_no(TotalChannelCount);
+}
+
+// 随机获取TCP通道名称
+//返回通道名称
+function getRandomTcpChannel(type){
+	return ENV.getRandomTcpChannel(type);
+}
+
+// 执行业务流
+function run_caseFlow(batchno,caseflowid) {
+	return ENV.run_caseFlow(batchno,caseflowid);
+}

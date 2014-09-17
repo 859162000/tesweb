@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="QueueList" table="t_queuelist">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="NAME" />
+		<property name="description" column="DESCRIPTION" />
+		
+		<property name="systemid" column="SYSTEMID" />
+		
+		<set name="queuetask" table="t_queuetask" order-by="id asc" inverse="false" lazy="false" cascade="all">
+			<key>
+				<column name="QUEUELISTID" />
+			</key>
+			<one-to-many class="QueueTask" />
+		</set>
+		
+		<set name="queueLog" table="t_queuelogstat" order-by="id desc" inverse="false" lazy="false" cascade="all">
+			<key>
+				<column name="QUEUELISTID" />
+			</key>
+			<one-to-many class="QueueLogStat" />
+		</set>
+
+	</class>
+</hibernate-mapping>

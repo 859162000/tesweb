@@ -1,0 +1,48 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/simpapp/ubbsimple	$Revision: 1.5 $"
+
+#Skeleton UBBCONFIG file for the TUXEDO Simple Application.
+#Replace the <bracketed> items with the appropriate values.
+
+*RESOURCES
+IPCKEY	        66051	
+
+#Example:
+DOMAINID	EAIH_TUX
+MASTER		SITE1
+MAXACCESSERS	200	
+MAXSERVERS	200
+MAXSERVICES	300
+MODEL		SHM
+LDBAL		N	
+
+*MACHINES
+DEFAULT:
+                APPDIR="/home/tesadpt/agent/bin"
+                TUXCONFIG="/home/tesadpt/agent/etc/tuxconfig"
+                TUXDIR="/home/tuxedo/tuxedo10.0"
+		ULOGPFX="/home/tesadpt/agent/log/ULOG"
+                MAXWSCLIENTS=50
+
+ptss		LMID=SITE1 
+
+*GROUPS
+GROUP1		LMID=SITE1	GRPNO=1	OPENINFO=NONE
+LDMGRP		LMID=SITE1 GRPNO=100
+LGWGRP01	LMID=SITE1 GRPNO=101
+
+*SERVERS
+DEFAULT:
+		CLOPT="-A -t"
+
+DMADM           SRVGRP=LDMGRP SRVID=1 
+
+GWADM		SRVGRP=LGWGRP01 SRVID=101 
+GWTDOMAIN	SRVGRP=LGWGRP01 SRVID=102
+
+
+#WSL             SRVGRP=GROUP1 SRVID=1000
+#                CLOPT="-A -- -n //192.168.0.99:5500 -m 5 -M 100 -x 10 -p "
+
+
+*SERVICES

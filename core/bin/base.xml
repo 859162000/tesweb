@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config><name>银企直连</name><port>4693</port><data>db.mysql</data><conn>jdbc:mysql://localhost:3306/tesdb</conn><username>root</username><password>123456</password><monitor><host>localhost</host><port>8809</port></monitor></config>

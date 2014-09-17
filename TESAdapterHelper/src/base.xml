@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config><name>二代支付前置机</name><port>4691</port><data>db.mysql</data><conn>jdbc:mysql://localhost:3306/tesdb</conn><username>root</username><password>123456</password><monitor><host>99.6.80.5</host><port>8809</port></monitor></config>

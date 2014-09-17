@@ -1,0 +1,2 @@
+. ../setcltenv
+tmshutdown -y

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg><!-- 
+    <field name="interfaceName" />
+    <field name="interfaceVersion" />
+    <field name="orderid" />
+    <field name="amount" />
+    <field name="curType" />
+    <field name="merID" />
+    <field name="merAcct" />
+    <field name="verifyJoinFlag" />
+    <field name="notifyType" />
+    <field name="merURL" />
+    <field name="resultType" />
+    <field name="goodsID" />
+    <field name="goodsName" />
+    <field name="goodsNum" />
+    <field name="carriageAmt" />
+    <field name="merHint" />
+    <field name="orderDate" />
+    <field name="remark1" />
+    <field name="remark2" /> -->
+</msg>

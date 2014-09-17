@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <welcome-file-list>
+        <welcome-file>MainPage.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>transerver</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.TransactionService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>transerver</servlet-name>
+        <url-pattern>/transerver</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>simuSys</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.SimuSystemService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>simuSys</servlet-name>
+        <url-pattern>/simuSys</url-pattern>
+    </servlet-mapping>
+    
+ 	<servlet>
+        <servlet-name>result</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.ResultService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>result</servlet-name>
+        <url-pattern>/result</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>user</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.UserService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>user</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>case</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>case</servlet-name>
+        <url-pattern>/case</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>scriptFlow</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.ScriptFlowService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>scriptFlow</servlet-name>
+        <url-pattern>/scriptFlow</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+        <servlet-name>queue</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.QueueService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queue</servlet-name>
+        <url-pattern>/queue</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>dbHost</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.DbHostService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dbHost</servlet-name>
+        <url-pattern>/dbHost</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>recordedCase</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.RecordedCaseService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>recordedCase</servlet-name>
+        <url-pattern>/recordedCase</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>helper</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.HelperService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helper</servlet-name>
+        <url-pattern>/helper</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    	<servlet-name>batchNo</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.BatchService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>batchNo</servlet-name>
+    	<url-pattern>/batchNo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TranStructServletUpload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.TranStructServletUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TranStructServletUpload</servlet-name>
+        <url-pattern>/TranStructServletUpload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>launchserver</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.LaunchService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>launchserver</servlet-name>
+        <url-pattern>/launchserver</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CaseRespServletUpload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseRespServletUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CaseRespServletUpload</servlet-name>
+        <url-pattern>/CaseRespServletUpload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CaseExpectValueUpload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseExpectValueUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CaseExpectValueUpload</servlet-name>
+        <url-pattern>/CaseExpectValueUpload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CaseStructServletUpload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseStructServletUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CaseStructServletUpload</servlet-name>
+        <url-pattern>/CaseStructServletUpload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>MultiCaseUpload</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.MultiCaseUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>MultiCaseUpload</servlet-name>
+    	<url-pattern>/MultiCaseUpload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>YQMultiCaseUpload</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.YQMultiCaseUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>YQMultiCaseUpload</servlet-name>
+    	<url-pattern>/YQMultiCaseUpload</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+		<servlet-name>CaseResultExport</servlet-name>
+		<servlet-class>com.dc.tes.ui.server.CaseResultExport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CaseResultExport</servlet-name>
+		<url-pattern>/CaseResultExport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UseCaseInfoExport</servlet-name>
+		<servlet-class>com.dc.tes.ui.server.UseCaseInfoExport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UseCaseInfoExport</servlet-name>
+		<url-pattern>/UseCaseInfoExport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CaseExpectValueExport</servlet-name>
+		<servlet-class>com.dc.tes.ui.server.CaseExpectValueExport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CaseExpectValueExport</servlet-name>
+		<url-pattern>/CaseExpectValueExport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CaseDetailExport</servlet-name>
+		<servlet-class>com.dc.tes.ui.server.CaseDetailExport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CaseDetailExport</servlet-name>
+		<url-pattern>/CaseDetailExport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CaseFlowResultExport</servlet-name>
+		<servlet-class>com.dc.tes.ui.server.CaseFlowResultExport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CaseFlowResultExport</servlet-name>
+		<url-pattern>/CaseFlowResultExport</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>YQCaseFlowResultExport</servlet-name>
+		<servlet-class>com.dc.tes.ui.server.YQCaseFlowResultExport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>YQCaseFlowResultExport</servlet-name>
+		<url-pattern>/YQCaseFlowResultExport</url-pattern>
+	</servlet-mapping>
+
+    <servlet>
+        <servlet-name>PackTemplateDownload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.PackTemplateDownload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PackTemplateDownload</servlet-name>
+        <url-pattern>/PackTemplateDownload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TranStructServletDownload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.TranStructServletDownload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TranStructServletDownload</servlet-name>
+        <url-pattern>/TranStructServletDownload</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>CaseStructServletDownLoad</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseStructServletDownLoad</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CaseStructServletDownLoad</servlet-name>
+        <url-pattern>/CaseStructServletDownLoad</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>pData</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.PersistentDataService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pData</servlet-name>
+        <url-pattern>/pData</url-pattern>
+    </servlet-mapping>
+
+   <servlet>
+        <servlet-name>sysPara</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.SysDynamicParameterService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sysPara</servlet-name>
+        <url-pattern>/sysPara</url-pattern>
+    </servlet-mapping>
+
+ 	<servlet>
+        <servlet-name>statistic</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.StaticsService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>statistic</servlet-name>
+        <url-pattern>/statistic</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+        <servlet-name>DownloadFile</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.DownloadFile</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DownloadFile</servlet-name>
+        <url-pattern>/DownloadFile</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SystemDynamicParaUpload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.SystemDynamicParaUpload</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SystemDynamicParaUpload</servlet-name>
+        <url-pattern>/SystemDynamicParaUpload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CaseMsgUpload</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseMsgUpload</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CaseMsgUpload</servlet-name>
+        <url-pattern>/CaseMsgUpload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userSys</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.UserSysService</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>userSys</servlet-name>
+        <url-pattern>/userSys</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>moniserver</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.MonitorService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>moniserver</servlet-name>
+        <url-pattern>/moniserver</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>simustatus</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.SimuStatusService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>simustatus</servlet-name>
+        <url-pattern>/simustatus</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>component</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.ComponentService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>component</servlet-name>
+        <url-pattern>/component</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>useCase</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.UseCaseService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>useCase</servlet-name>
+    	<url-pattern>/useCase</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>executeSet</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.ExecuteSetService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>executeSet</servlet-name>
+    	<url-pattern>/executeSet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>testRound</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.TestRoundService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>testRound</servlet-name>
+    	<url-pattern>/testRound</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>executePlan</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.ExecutePlanService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>executePlan</servlet-name>
+    	<url-pattern>/executePlan</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>executeSetExecutePlan</servlet-name>
+    	<servlet-class>com.dc.tes.ui.server.ExecuteSetExecutePlanService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>executeSetExecutePlan</servlet-name>
+    	<url-pattern>/executeSetExecutePlan</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>interface</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.InterfaceService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>interface</servlet-name>
+        <url-pattern>/interface</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>As400InterfaceImport</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.As400InterfaceImport</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>As400InterfaceImport</servlet-name>
+        <url-pattern>/As400InterfaceImport</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>copiedSystem</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CopiedSystemService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>copiedSystem</servlet-name>
+        <url-pattern>/copiedSystem</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>operationLog</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.OperationLogService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>operationLog</servlet-name>
+        <url-pattern>/operationLog</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>loginLog</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.LoginLogService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginLog</servlet-name>
+        <url-pattern>/loginLog</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>caseStatistics</servlet-name>
+        <servlet-class>com.dc.tes.ui.server.CaseStatisticsService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>caseStatistics</servlet-name>
+        <url-pattern>/caseStatistics</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>MonitorServlet</servlet-name>
+        <servlet-class>com.dc.tes.monitor.MonitorSrv</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>monitorPort</param-name>
+            <param-value>8809</param-value>
+        </init-param>
+        <init-param>
+            <param-name>LogMaxNum</param-name>
+            <param-value>100</param-value>
+        </init-param>
+        <init-param>
+            <param-name>LogMaxSize</param-name>
+            <param-value>2097152</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MonitorServlet</servlet-name>
+        <url-pattern>/MonitorServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>MonitorTh</servlet-name>
+        <servlet-class>com.dc.tes.monitor.MonitorThread</servlet-class>
+         <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MonitorTh</servlet-name>
+        <url-pattern>/MonitorTh</url-pattern>
+    </servlet-mapping>
+</web-app>

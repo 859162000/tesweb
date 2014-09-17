@@ -1,0 +1,2 @@
+. ../setcltenv
+tmboot -y

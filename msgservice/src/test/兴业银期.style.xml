@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="gb2312">
+        <format>%[len='4',align='right',fillingChar='0']s%s%[len='64']s</format>
+        <param>lm+64</param>
+        <param>m</param>
+        <param>f.test.FormatTest.md5</param>
+    </Document>
+
+    <Field>
+        <format>%[align='left',fillingChar='\0']s%{00}</format>
+        <param>v</param>
+    </Field>
+</Format>

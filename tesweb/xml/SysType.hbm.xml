@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="SysType" table="t_systype">
+
+		<id name="systemId" column="SYSTEMID">
+			<generator class="identity" />
+		</id>
+
+		<property name="systemNo" column="SYSTEMNO" />
+		<property name="systemName" column="SYSTEMNAME" />
+		<property name="desc" column="DESCRIPTION" />
+		<property name="stylestruct" column="STYLESTRUCT" />
+		<property name="flag" column="FLAG" />
+		<property name="ipadress" column="IPADRESS" />
+		<property name="portnum" column="PORTNUM" />
+		<property name="channel" column="CHANNEL" />
+		
+		<property name="basecfg" column="BASECFG" />
+		<property name="maxdelaytime" column="MAXDELAYTIME" />
+		<property name="mindelaytime" column="MINDELAYTIME" />
+		
+		<property name="delaytimetype" column="DELAYTIMETYPE" />
+		
+		<property name="isused" column="ISUSED" />
+		
+		<!--  
+		<property name="reccodeid" column="RECCODEID" />
+		<property name="packid" column="PACKID" />
+		<property name="unpackid" column="UNPACKID" />
+		-->
+
+		<!--  
+		<set name="System2User" inverse="true" >
+			<key>
+				<column name="SYSTEMID" not-null="true"/>
+			</key>
+			<one-to-many class="UserRSystem" />
+		</set>
+		-->
+
+	</class>
+</hibernate-mapping>

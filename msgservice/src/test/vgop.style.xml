@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="utf-8">
+        <format>
+            <![CDATA[<?xml version="1.0" encoding="utf-8"?><ProvBOSS>%s</ProvBOSS>]]>
+        </format>
+        <param>m</param>
+    </Document>
+
+    <Field>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </Field>
+    <FieldInStru>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInStru>
+    <FieldInStruArray>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInStruArray>
+
+    <ArrayOfStru>
+        <format>
+            <![CDATA[%s]]>
+        </format>
+        <param>m</param>
+    </ArrayOfStru>
+
+    <Stru>
+        <format>
+            <![CDATA[<%s>%s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>m</param>
+        <param>n</param>
+    </Stru>
+
+    <StruInArray>
+        <format>
+            <![CDATA[<%s>%s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>m</param>
+        <param>n</param>
+    </StruInArray>
+
+    <Special target="SvcCont">
+        <format>
+            <![CDATA[<SvcCont><![CDATA[%s%s%{5D}]></SvcCont>]]>
+        </format>
+        <param>s.XMLHead</param>
+        <param>m</param>
+    </Special>
+    
+    <Script name="XMLHead"><![CDATA[
+        MsgStruct stru = (MsgStruct) item;
+        if (stru.size() == 0)
+            return Value.empty;
+        else
+            return new Value("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+    ]]></Script>
+</Format>

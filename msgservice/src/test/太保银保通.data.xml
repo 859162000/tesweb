@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+  <field name="TransNo" desc="交易码" len="" type="string" isArray="false" defaultValue=""></field>
+  <field name="QdBankCode" desc="签到银行代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="BankCode" desc="区域银行代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="Branch" desc="储蓄所代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="CarrierCode" desc="太保机构代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="TransExeDate" desc="银行交易日期" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="TransExeTime" desc="银行交易时间" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="TransRefGUID" desc="银行流水号" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="Teller" desc="银行操作员" len="" type="string" isArray="true" defaultValue=""></field>
+  <struct name="PolicyHolder" desc="投保人信息" len="" type="string" isArray="true" defaultValue="">
+    <field name="GovtID" desc="投保人证件号码" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="GovtIDTC" desc="投保人证件类型" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="BirthDate" desc="投保人出生日期" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Gender" desc="投保人性别" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="FullName" desc="投保人姓名" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Line1" desc="缴费地址" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="DialNumber" desc="缴费电话" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Zip" desc="缴费邮编" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="RelatedToInsuredRoleCode" desc="与被保人关系" len="" type="string" isArray="true" defaultValue=""></field>
+  </struct>
+  <struct name="Insured" desc="被保人信息" len="" type="string" isArray="true" defaultValue="">
+    <field name="GovtID" desc="被保人证件号码" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="GovtIDTC" desc="被保人证件类型" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="BirthDate" desc="字段类型" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Gender" desc="字段类型" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="FullName" desc="被保人姓名" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="OccupationType" desc="被保人职业类别" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Line1" desc="被保人居住地址" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Zip" desc="被保人居住邮编" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="DialNumber" desc="被保人电话" len="" type="string" isArray="true" defaultValue=""></field>
+  </struct>
+  <field name="HOAppFormNumber" desc="投保单号" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="ProductCode" desc="险种代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="PaymentAmt" desc="银行可上送合计保费(主险保费＋附加险保费)" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="SubmissionDate" desc="投保日期" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="IntialNumberOfUnits" desc="投保份数" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="PaymentMode" desc="缴费方式码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="PaymentDuration" desc="缴费年限" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="CpicTeller" desc="太保业务员代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="BeneficiaryIndicator" desc="受益人是否为法定标志" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="BeneficiaryCount" desc="受益人个数" len="" type="string" isArray="true" defaultValue=""></field>
+  <struct name="Beneficiary" desc="受益分配约定" len="" type="string" isArray="true" defaultValue="">
+    <field name="BeneficiaryMethod" desc="分配方式" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="GovtID" desc="受益人号" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="FullName" desc="受益人姓名" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="Gender" desc="受益人性别" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="RelatedToInsuredRoleCode" desc="与被保人关系" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="InterestPercent" desc="分配比例下面代表%50" len="" type="string" isArray="true" defaultValue=""></field>
+  </struct>
+  <field name="DivType" desc="红利领取方式代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="BenefitMode" desc="领取/给付方式代码" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="EffDate" desc="责任起始日期" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="TermDate" desc="责任终止日期" len="" type="string" isArray="true" defaultValue=""></field>
+  <field name="CoverageCount" desc="附加险个数" len="" type="string" isArray="true" defaultValue=""></field>
+  <struct name="Extension" desc="附加险费用结构" len="" type="string" isArray="true" defaultValue="">
+    <field name="ProductCode" desc="险种代码" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="IntialNumberOfUnits" desc="附加险份数" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="PaymentMode" desc="缴费方式代码" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="PayoutDuration" desc="缴费年限" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="BenefitMode" desc="领取/给付方式代码" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="DivType" desc="红利领取方式代码" len="" type="string" isArray="true" defaultValue=""></field>
+  </struct>
+  <struct name="Investment" desc="投资账户" len="" type="string" isArray="true" defaultValue="">
+    <field name="InvestDateInd" desc="投资日期标志" len="" type="string" isArray="true" defaultValue=""></field>
+    <struct name="SubAccount" desc="字段类型" len="" type="string" isArray="true" defaultValue="">
+      <field name="ProductCode" desc="投资帐户代码" len="" type="string" isArray="true" defaultValue=""></field>
+      <field name="ProductFullName" desc="投资账户名称" len="" type="string" isArray="true" defaultValue=""></field>
+      <field name="AllocPercent" desc="投资账户比率" len="" type="string" isArray="true" defaultValue=""></field>
+    </struct>
+  </struct>
+  <struct name="Banking" desc="银行账号信息" len="" type="string" isArray="true" defaultValue="">
+    <field name="AccountType" desc="银行签约类型" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="AccountNumber" desc="银行签约帐号" len="" type="string" isArray="true" defaultValue=""></field>
+    <field name="BankName" desc="银行名称" len="" type="string" isArray="true" defaultValue=""></field>
+  </struct>
+  <field name="HealthIndicator" desc="健康告知" len="" type="string" isArray="true" defaultValue=""></field>
+</msg>

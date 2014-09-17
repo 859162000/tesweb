@@ -1,0 +1,9 @@
+include ./baselib.mk
+all:Util.o clean
+Util.o:Util.c 
+	@echo '====Now Start to Rebuild Util.o    ===='
+	xlC -c -I$(BASEINC) -g -q64 -w -wx  Util.c 
+	ar -X64 -rv $(BASELIB)/libUtil.a Util.o
+	@echo '====Rebuild  libUtil.a successfully    ===='
+clean:	
+	rm Util.o

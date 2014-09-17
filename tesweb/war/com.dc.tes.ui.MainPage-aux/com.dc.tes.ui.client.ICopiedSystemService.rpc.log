@@ -1,0 +1,559 @@
+Reachable types computed on: Tue Mar 18 10:51:09 CST 2014
+com.dc.tes.ui.client.model.GWTCopiedSystem
+   Serialization status
+      Instantiable
+   Path
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.extjs.gxt.ui.client.core.FastMap<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'com.extjs.gxt.ui.client.core.FastMap<java.lang.String>' is reachable as a subtype of type 'interface java.util.Map<java.lang.String, java.lang.String>'
+      'java.util.Map<java.lang.String, java.lang.String>' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.core.FastSet'
+      'com.extjs.gxt.ui.client.core.FastSet' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.extjs.gxt.ui.client.core.FastSet
+   Serialization status
+      Instantiable
+   Path
+      'com.extjs.gxt.ui.client.core.FastSet' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.extjs.gxt.ui.client.data.BaseModelData
+   Serialization status
+      Field serializable
+   Path
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.extjs.gxt.ui.client.data.RpcMap
+   Serialization status
+      Instantiable
+   Path
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.google.gwt.i18n.client.impl.DateRecord
+   Serialization status
+      Instantiable
+   Path
+      'com.google.gwt.i18n.client.impl.DateRecord' is reachable as a subtype of type 'class java.util.Date'
+      'java.util.Date' is reachable from field '_date' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.google.gwt.i18n.client.impl.DateRecord[]
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Date[]' is reachable from field '_dates' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException
+   Serialization status
+      Instantiable
+   Path
+      'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException' is reachable as a subtype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      Started from 'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+
+java.lang.Boolean
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Boolean' is reachable as a subtype of type 'class java.lang.Boolean'
+      Started from 'java.lang.Boolean'
+
+java.lang.Boolean[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Boolean[]' is reachable from field '_booleans' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Byte
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Byte' is reachable as a subtype of type 'class java.lang.Byte'
+      'java.lang.Byte' is reachable from field '_byte' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Byte[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Byte[]' is reachable from field '_bytes' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Double
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Double' is reachable as a subtype of type 'class java.lang.Double'
+      'java.lang.Double' is reachable from field '_double' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Double[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Double[]' is reachable from field '_doubles' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Exception
+   Serialization status
+      Field serializable
+   Path
+      'java.lang.Exception' is reachable as a supertype of type 'class java.lang.RuntimeException'
+      'java.lang.RuntimeException' is reachable as a supertype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException' is reachable as a subtype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      Started from 'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+
+java.lang.Float
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Float' is reachable as a subtype of type 'class java.lang.Float'
+      'java.lang.Float' is reachable from field '_float' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Float[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Float[]' is reachable from field '_floats' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Integer
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Integer' is reachable as a subtype of type 'class java.lang.Integer'
+      'java.lang.Integer' is reachable from field '_integer' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Integer[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Integer[]' is reachable from field '_integers' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Long
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Long' is reachable as a subtype of type 'class java.lang.Long'
+      'java.lang.Long' is reachable from field '_long' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Long[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Long[]' is reachable from field '_longs' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Number
+   Serialization status
+      Field serializable
+   Path
+      'java.lang.Number' is reachable as a supertype of type 'class java.lang.Byte'
+      'java.lang.Byte' is reachable as a subtype of type 'class java.lang.Byte'
+      'java.lang.Byte' is reachable from field '_byte' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.RuntimeException
+   Serialization status
+      Field serializable
+   Path
+      'java.lang.RuntimeException' is reachable as a supertype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException' is reachable as a subtype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      Started from 'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+
+java.lang.Short
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Short' is reachable as a subtype of type 'class java.lang.Short'
+      'java.lang.Short' is reachable from field '_short' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Short[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.Short[]' is reachable from field '_shorts' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.String
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.String' is reachable as a subtype of type 'class java.lang.String'
+      Started from 'java.lang.String'
+
+java.lang.String[]
+   Serialization status
+      Instantiable
+   Path
+      'java.lang.String' is reachable from type argument 0 of type 'java.util.Arrays.ArrayList<E>'
+      'java.util.Arrays.ArrayList<java.lang.String>' is reachable as a subtype of type 'interface java.util.List<java.lang.String>'
+      'java.util.List<java.lang.String>' is reachable from field '_list' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.lang.Throwable
+   Serialization status
+      Field serializable
+   Path
+      'java.lang.Throwable' is reachable as a supertype of type 'class java.lang.Exception'
+      'java.lang.Exception' is reachable as a supertype of type 'class java.lang.RuntimeException'
+      'java.lang.RuntimeException' is reachable as a supertype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException' is reachable as a subtype of type 'class com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+      Started from 'com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException'
+
+java.sql.Date
+   Serialization status
+      Instantiable
+   Path
+      'java.sql.Date' is reachable as a subtype of type 'class java.util.Date'
+      'java.util.Date' is reachable from field '_date' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.sql.Date[]
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Date[]' is reachable from field '_dates' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.sql.Time
+   Serialization status
+      Instantiable
+   Path
+      'java.sql.Time' is reachable as a subtype of type 'class java.util.Date'
+      'java.util.Date' is reachable from field '_date' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.sql.Time[]
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Date[]' is reachable from field '_dates' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.sql.Timestamp
+   Serialization status
+      Instantiable
+   Path
+      'java.sql.Timestamp' is reachable as a subtype of type 'class java.util.Date'
+      'java.util.Date' is reachable from field '_date' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.sql.Timestamp[]
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Date[]' is reachable from field '_dates' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.ArrayList<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.ArrayList<java.lang.String>' is reachable as a subtype of type 'interface java.util.List<java.lang.String>'
+      'java.util.List<java.lang.String>' is reachable from field '_list' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.Arrays.ArrayList<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Arrays.ArrayList<java.lang.String>' is reachable as a subtype of type 'interface java.util.List<java.lang.String>'
+      'java.util.List<java.lang.String>' is reachable from field '_list' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.Date
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Date' is reachable as a subtype of type 'class java.util.Date'
+      'java.util.Date' is reachable from field '_date' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.Date[]
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Date[]' is reachable from field '_dates' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.HashMap<java.lang.String, java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.HashMap<java.lang.String, java.lang.String>' is reachable as a supertype of type 'class java.util.LinkedHashMap<java.lang.String, java.lang.String>'
+      'java.util.LinkedHashMap<java.lang.String, java.lang.String>' is reachable as a subtype of type 'interface java.util.Map<java.lang.String, java.lang.String>'
+      'java.util.Map<java.lang.String, java.lang.String>' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.core.FastSet'
+      'com.extjs.gxt.ui.client.core.FastSet' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.HashSet<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.HashSet<java.lang.String>' is reachable as a supertype of type 'class java.util.LinkedHashSet<java.lang.String>'
+      'java.util.LinkedHashSet<java.lang.String>' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.IdentityHashMap<java.lang.String, java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.IdentityHashMap<java.lang.String, java.lang.String>' is reachable as a subtype of type 'interface java.util.Map<java.lang.String, java.lang.String>'
+      'java.util.Map<java.lang.String, java.lang.String>' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.core.FastSet'
+      'com.extjs.gxt.ui.client.core.FastSet' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.LinkedHashMap<java.lang.String, java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.LinkedHashMap<java.lang.String, java.lang.String>' is reachable as a subtype of type 'interface java.util.Map<java.lang.String, java.lang.String>'
+      'java.util.Map<java.lang.String, java.lang.String>' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.core.FastSet'
+      'com.extjs.gxt.ui.client.core.FastSet' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.LinkedHashSet<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.LinkedHashSet<java.lang.String>' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.LinkedList<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.LinkedList<java.lang.String>' is reachable as a subtype of type 'interface java.util.List<java.lang.String>'
+      'java.util.List<java.lang.String>' is reachable from field '_list' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.Stack<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Stack<java.lang.String>' is reachable as a subtype of type 'interface java.util.List<java.lang.String>'
+      'java.util.List<java.lang.String>' is reachable from field '_list' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.TreeMap<java.lang.String, java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.TreeMap<java.lang.String, java.lang.String>' is reachable as a subtype of type 'interface java.util.Map<java.lang.String, java.lang.String>'
+      'java.util.Map<java.lang.String, java.lang.String>' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.core.FastSet'
+      'com.extjs.gxt.ui.client.core.FastSet' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.TreeMap<E, java.lang.Boolean>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.TreeMap<E, java.lang.Boolean>' is reachable as a subtype of type 'interface java.util.SortedMap<E, java.lang.Boolean>'
+      'java.util.SortedMap<E, java.lang.Boolean>' is reachable from field 'map' of type 'java.util.TreeSet<E>'
+      'java.util.TreeSet<java.lang.String>' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.TreeSet<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.TreeSet<java.lang.String>' is reachable as a subtype of type 'interface java.util.Set<java.lang.String>'
+      'java.util.Set<java.lang.String>' is reachable from field '_set' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+
+java.util.Vector<java.lang.String>
+   Serialization status
+      Instantiable
+   Path
+      'java.util.Vector<java.lang.String>' is reachable as a supertype of type 'class java.util.Stack<java.lang.String>'
+      'java.util.Stack<java.lang.String>' is reachable as a subtype of type 'interface java.util.List<java.lang.String>'
+      'java.util.List<java.lang.String>' is reachable from field '_list' of type 'com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable as a subtype of type 'class com.extjs.gxt.ui.client.data.RpcMap'
+      'com.extjs.gxt.ui.client.data.RpcMap' is reachable from field 'map' of type 'com.extjs.gxt.ui.client.data.BaseModelData'
+      'com.extjs.gxt.ui.client.data.BaseModelData' is reachable as a supertype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      'com.dc.tes.ui.client.model.GWTCopiedSystem' is reachable as a subtype of type 'class com.dc.tes.ui.client.model.GWTCopiedSystem'
+      Started from 'com.dc.tes.ui.client.model.GWTCopiedSystem'
+

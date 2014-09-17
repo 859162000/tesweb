@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format>%[len='2']s%s%s</format>
+		<param>_</param>
+		<param>f.test.FormatTest.bitmap</param>
+		<param>m</param>
+	</Document>
+
+	<Field usage="format=DATA;type=int">
+		<format>%s</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR;type=int">
+		<format>%[len='2']s%s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR;type=int">
+		<format>%[len='2']s%s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=DATA">
+		<format>%s</format>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLVAR">
+		<format>%[len='2']s%[ignoreLen='true']s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+	<Field usage="format=LLLVAR">
+		<format>%[len='2']s%[ignoreLen='true']s</format>
+		<param>lv</param>
+		<param>v</param>
+	</Field>
+
+	<Script name="bitmap"><![CDATA[
+		// 解析位图
+		
+		int bmLen = context.bytes[4] < 0 ? 16 : 8;// 用符号位判断是否存在扩展位图
+
+		byte[] bitmap = new byte[bmLen];
+		System.arraycopy(context.bytes, 4, bitmap, 0, bmLen);
+        
+        // 根据位图中的内容 砍掉模板中不应该存在的域 以使模板与报文相匹配
+		for (int bmIndex = 0; bmIndex < bitmap.length; bmIndex++)
+			for (int i = 0; i < 8; i++)
+				if ((1 << (7 - i) & bitmap[bmIndex]) == 0)
+					((MsgStruct)context.template).remove("b" + String.valueOf(bmIndex * 8 + i + 1));
+		
+        // 设置位图长度
+        context.length = bmLen;
+        return true;
+	]]></Script>
+</Format>

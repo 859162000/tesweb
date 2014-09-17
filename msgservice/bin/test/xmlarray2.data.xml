@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<struct name="pub">
+		<field name="TransCode" desc="交易代码">QBINF</field>
+		<field name="CIS" desc="集团CIS号">1202020609900005706</field>
+		<field name="BankCode" desc="归属银行编号">001</field>
+		<field name="ID" desc="证书ID">omd1.y.0200</field>
+		<field name="TranDate" desc="交易日期"></field>
+		<field name="TranTime" desc="交易时间"></field>
+		<field name="fSeqno" desc="指令包序列号"></field>
+	</struct>
+	<struct name="in">
+		<field name="TotalNum" desc="总笔数">1</field>
+		<field name="BillNo" isarray="true" desc="票据号码">001099920301982</field>
+		<field name="BillNo" isarray="true" desc="票据号码">001099910270392</field>
+		<field name="KeepType" desc="托管状态">1</field>
+		<field name="TranType" desc="指令类型">1</field>
+		<field name="SMutDate" desc="票据到期起始日期">20080101</field>
+		<field name="EMutDate" desc="票据到期截止日期">20091231</field>
+		<field name="BeginTime" desc="开始时间"></field>
+		<field name="EndTime" desc="终止时间"></field>
+		<field name="ReqReserved1" desc="请求备用字段1"></field>
+		<field name="ReqReserved2" desc="请求备用字段2"></field>
+		<struct name="rd" isarray="true">
+			<field name="iSeqno" desc="指令顺序号">0001</field>
+			<field name="HolderName" desc="持票人户名">AAA</field>
+			<field name="HolderAccNo" desc="持票人账号">001099920301982</field>
+			<field name="ReqReserved3" desc="请求备用字段3"></field>
+			<field name="ReqReserved4" desc="请求备用字段4"></field>
+		</struct>
+		<struct name="rd" isarray="true">
+			<field name="iSeqno" desc="指令顺序号">0002</field>
+			<field name="HolderName" desc="持票人户名">BBB</field>
+			<field name="HolderAccNo" desc="持票人账号">001099910270392</field>
+			<field name="ReqReserved3" desc="请求备用字段3"></field>
+			<field name="ReqReserved4" desc="请求备用字段4"></field>
+		</struct>
+	</struct>
+</msg>

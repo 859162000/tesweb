@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<struct name="pub">
+		<field name="TransCode">QBINF</field>
+		<field name="CIS">1202020609900005706</field>
+		<field name="BankCode">001</field>
+		<field name="ID">omd1.y.0200</field>
+		<field name="TranDate"></field>
+		<field name="TranTime"></field>
+		<field name="fSeqno"></field>
+	</struct>
+	<struct name="in">
+		<field name="TotalNum">1</field>
+		<field name="BillNo" isarray="true">001099920301982</field>
+		<field name="BillNo" isarray="true">001099910270392</field>
+		<field name="KeepType">1</field>
+		<field name="TranType">1</field>
+		<field name="SMutDate">20080101</field>
+		<field name="EMutDate">20091231</field>
+		<field name="BeginTime"></field>
+		<field name="EndTime"></field>
+		<field name="ReqReserved1"></field>
+		<field name="ReqReserved2"></field>
+		<struct name="rd" isarray="true">
+			<field name="iSeqno">0001</field>
+			<field name="HolderName">AAA</field>
+			<field name="HolderAccNo">001099920301982</field>
+			<field name="ReqReserved3"></field>
+			<field name="ReqReserved4"></field>
+		</struct>
+		<struct name="rd" isarray="true">
+			<field name="iSeqno">0002</field>
+			<field name="HolderName">BBB</field>
+			<field name="HolderAccNo">001099910270392</field>
+			<field name="ReqReserved3"></field>
+			<field name="ReqReserved4"></field>
+		</struct>
+	</struct>
+	<field name="Code" isarray="true">AAA</field>
+	<field name="Code" isarray="true">BBB</field>
+</msg>

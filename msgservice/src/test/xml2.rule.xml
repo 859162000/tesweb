@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Ignore method="Regex" regex="\&gt;(\s+)\&lt;" group="1" />
+
+    <Document encoding="utf-8">
+        <format>
+            <![CDATA[<?xml version="1.0" encoding="utf-8"?><ProvBOSS>%s</ProvBOSS>]]>
+        </format>
+        <param>m</param>
+    </Document>
+
+    <Field>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </Field>
+    <FieldInArray>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInArray>
+    <FieldInStru>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInStru>
+    <FieldInStruArray>
+        <format>
+            <![CDATA[<%s>%[ignoreLen='true']s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>v</param>
+        <param>n</param>
+    </FieldInStruArray>
+
+    <Array>
+        <format>
+            <![CDATA[%s]]>
+        </format>
+        <param>m</param>
+    </Array>
+    <ArrayOfStru>
+        <format>
+            <![CDATA[%s]]>
+        </format>
+        <param>m</param>
+    </ArrayOfStru>
+
+    <Stru>
+        <format>
+            <![CDATA[<%s>%s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>m</param>
+        <param>n</param>
+    </Stru>
+
+    <StruInArray>
+        <format>
+            <![CDATA[<%s>%s</%s>]]>
+        </format>
+        <param>n</param>
+        <param>m</param>
+        <param>n</param>
+    </StruInArray>
+</Format>

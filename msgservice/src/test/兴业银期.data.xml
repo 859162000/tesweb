@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msg>
+	<field name="PackFlag" len="2">B0</field>
+	<field name="DeviceId" len="2"></field>
+	<field name="SourceId" len="30">701</field>
+	<field name="BankId" len="2"></field>
+	<field name="BankAccType" len="1"></field>
+	<field name="BankAcc" len="21">11349303331</field>
+	<field name="BankSecuAccType" len="1"></field>
+	<field name="BankSecuAcc" len="21"></field>
+	<field name="BankPwdFlag" len="1"></field>
+	<field name="BankPwd" len="20"></field>
+	<field name="BankSer" len="16"></field>
+	<field name="SecuId" len="4">0</field>
+	<field name="SecuAccType" len="1"></field>
+	<field name="SecuAcc" len="20">212101</field>
+	<field name="SecuPwdFlag" len="1">2</field>
+	<field name="SecuPwd" len="16">f61dc7ae77167106</field>
+	<field name="SecuSer" len="6"></field>
+	<field name="PersonId" len="20"></field>
+	<field name="TrType" len="2">32</field>
+	<field name="TrAmt" len="14"></field>
+	<field name="TrDate" len="8">20091127</field>
+	<field name="TrTime" len="6">154912</field>
+	<field name="OperNo" len="7"></field>
+	<field name="RetCode" len="4"></field>
+	<field name="Note" len="16"></field>
+	<field name="LastPackage" len="1"></field>
+	<field name="TotalPackage" len="10"></field>
+	<field name="RetMsg" len="75"></field>
+	<field name="Note1" len="100"></field>
+	<field name="Note2" len="100"></field>
+</msg>

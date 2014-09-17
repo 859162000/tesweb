@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+	<Document encoding="gb2312">
+		<format><![CDATA[<?xml version="1.0"?>%s]]></format>
+		<param>m</param>
+	</Document>
+
+	<Field>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</Field>
+	<FieldInArray>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInArray>
+	<FieldInStru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInStru>
+	<FieldInStruArray>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>v</param>
+		<param>n</param>
+	</FieldInStruArray>
+	<Stru>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>m</param>
+		<param>n</param>
+	</Stru>
+	<StruInArray>
+		<format><![CDATA[<%s>%[ignoreLen='true']s</%s>]]></format>
+		<param>n</param>
+		<param>m</param>
+		<param>n</param>
+	</StruInArray>
+	<Array>
+		<format><![CDATA[%s]]></format>
+		<param>m</param>
+	</Array>
+	<ArrayOfStru>
+		<format><![CDATA[%s]]></format>
+		<param>m</param>
+	</ArrayOfStru>
+</Format>

@@ -1,0 +1,62 @@
+SHELL=/bin/sh
+
+CC=gcc
+CCC=gcc
+LD=ld 
+AR=ar 
+
+
+.SUFFIXES: .cpp .so .o .c .ec
+
+.cpp.o          :
+	$(CCC) $(CPPFLAGS) -c $<
+
+.c.o:
+	${CC} ${CFLAGS} -c $<
+
+.o.so           :
+	$(CCC) $(LDFLAGS) $< -G -o $@
+
+BASELIB=${HOME}/lib/liblinux
+#BASEINC=${HOME}/mq/include 
+BASEINC=../include 
+MQINC=/opt/mqm/inc
+MQLIB=/opt/mqm/lib
+
+
+CPPFLAGS=-I${BASEINC} -I${MQINC} -I${HOME}/inc  -I. -DLINUX
+CFLAGS=${CPPFLAGS} 
+#LIBS=-L${BASELIB} -L$(TUXDIR)/lib -lmqm -lapicnetLast32 
+#LIBS=-L${BASELIB} -L/home/ap/ftss/src/lib -lmqm -lapitcpl32
+LIBS=-L${BASELIB} -lmqm -lapitcps32 -lUtil
+LDFLAGS= -L${BASELIB} -L${MQLIB} 
+ARFLAGS=rv
+
+
+
+
+OBJS=pub.o MQproc.o MQmain.o MQshow.o MQstop.o MQdeal.o 
+
+BINS=MQmain MQstop MQshow MQdeal 
+
+all: ${BINS} MQSec.so clean
+
+MQmain: MQmain.o MQproc.o pub.o 
+	${CC}  -o $@  $? $(LIBS) 
+
+MQstop: MQstop.o MQproc.o pub.o 
+	${CC}  -o $@  $?   $(LIBS)
+
+MQshow: MQshow.o MQproc.o pub.o 
+	${CC}  -o $@  $?  $(LIBS)
+
+MQdeal: MQdeal.o MQproc.o pub.o 
+	${CC} -o $@ $?   $(LIBS)
+
+MQSec.so:MQSec.o
+	$(CC) -fPIC -shared -o $@  $?
+clean:
+	rm -f ${OBJS}
+	mv ${BINS} ../bin
+	mv MQSec.so $(HOME)/lib/liblinux
+

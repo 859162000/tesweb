@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="utf-8" cleanOptional="false">
+        <format>%s</format>
+        <param>m</param>
+    </Document>
+
+<Field  usage="type=string">
+	<format>%[fillingChar=' ',align='left']s</format>
+	<param>v</param>
+  </Field>
+
+    <Field  usage="type=int">
+	<format>%[fillingChar=' ',align='right']s</format>
+	<param>v</param>
+  </Field>
+
+</Format>

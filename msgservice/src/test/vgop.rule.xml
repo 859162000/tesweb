@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="utf-8">
+        <format>%s</format>
+        <param></param>
+    </Document>
+ 
+    <Script name="Parse" target="" usage="Unpack">
+        <import>java.io.IOException</import>
+        <import>java.io.ByteArrayInputStream</import>
+        <import>java.io.StringReader</import>
+        <import>org.xml.sax.Attributes</import>
+        <import>org.xml.sax.InputSource</import>
+        <import>org.xml.sax.SAXException</import>
+        <import>org.xml.sax.XMLReader</import>
+        <import>org.xml.sax.ext.DefaultHandler2</import>
+        <import>org.xml.sax.helpers.XMLReaderFactory</import>
+        <import>java.util.HashMap</import>
+        <import>java.util.Map</import>
+        <import>org.w3c.dom.Document</import>
+        <import>org.w3c.dom.Element</import>
+        <import>org.w3c.dom.Node</import>
+        <import>org.w3c.dom.NodeList</import>
+        <import>org.xml.sax.Attributes</import>
+        <import>org.xml.sax.InputSource</import>
+        <import>org.xml.sax.SAXException</import>
+        <import>org.xml.sax.XMLReader</import>
+        <import>org.xml.sax.ext.DefaultHandler2</import>
+        <import>org.xml.sax.helpers.XMLReaderFactory</import>
+        <![CDATA[
+        final MsgStruct doc = (MsgStruct) item;
+
+		final Wrapper<Boolean> responseSign = new Wrapper<Boolean>(false);
+
+		InputSource source = new InputSource(new ByteArrayInputStream(bytes));
+		XMLReader reader = XMLReaderFactory.createXMLReader();
+		DefaultHandler2 handler = new DefaultHandler2() {
+			private String m_value = "";
+
+			@Override
+			public void characters(char[] ch, int start, int length) throws SAXException {
+				m_value += new String(ch, start, length);
+			}
+
+			@Override
+			public void startElement(String uri, String localName, String name, Attributes attributes) throws SAXException {
+				if (localName.equals("Response")) {
+					MsgStruct responseStru = new MsgStruct();
+					responseStru.setAttribute("name", new Value("Response"));
+					doc.put("Response", responseStru);
+					responseSign.setValue(true);
+				}
+			}
+
+			@Override
+			public void endElement(String uri, String localName, String name) throws SAXException {
+				this.m_value = this.m_value.trim();
+
+				if (localName.equals("Response")) {
+					responseSign.setValue(false);
+					this.m_value = "";
+					return;
+				}
+
+				if (this.m_value.contains("<?xml")) {
+					final MsgStruct _stru = new MsgStruct();
+					_stru.setAttribute("name", new Value("SvcCont"));
+
+					try {
+						final Document cdata = XmlUtils.LoadXml(this.m_value);
+						final DocBuilder builder = new DocBuilder();
+
+						new Runnable() {
+							@Override
+							public void run() {
+								dfs(cdata);
+							}
+
+							private void dfs(Node e) {
+								try {
+									NodeList children = e.getChildNodes();
+									for (int i = 0; i < children.getLength(); i++) {
+										if (!(children.item(i) instanceof Element))
+											continue;
+										Element child = (Element) children.item(i);
+
+										if (XmlUtils.SelectNodes(child, "*").size() != 0) {
+											Map<String, String> attrs = new HashMap<String, String>();
+											attrs.put("name", child.getNodeName());
+											builder.BeginStru(attrs);
+											dfs(child);
+											builder.EndStru();
+										} else {
+											Map<String, String> attrs = new HashMap<String, String>();
+											attrs.put("name", child.getNodeName());
+											builder.Field(child.getTextContent(), attrs);
+										}
+									}
+								} catch (Exception ex) {
+									throw new RuntimeException(ex);
+								}
+							}
+						}.run();
+
+						MsgDocument _cdata = builder.Export();
+						for (String key : _cdata.keySet())
+							_stru.put(key, _cdata.get(key));
+
+						doc.put("SvcCont", _stru);
+					} catch (Exception ex) {
+						throw new RuntimeException(ex);
+					}
+				} else if (!localName.equals("ProvBOSS")) {
+					MsgField field = new MsgField();
+					field.setAttribute("name", new Value(localName));
+					field.set(this.m_value);
+
+					if (responseSign.getValue()) {
+						MsgStruct responseStru = (MsgStruct) doc.SelectSingleNode("Response");
+						responseStru.put(localName, field);
+					} else
+						doc.put(localName, field);
+				}
+
+				m_value = "";
+			}
+		};
+
+		// 进行解析
+		reader.setContentHandler(handler);
+		reader.parse(source);
+
+		return bytes.length;
+    ]]></Script>
+</Format>

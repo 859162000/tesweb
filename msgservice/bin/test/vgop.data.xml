@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="gb2312"?>
+<msg><!-- 
+    <field name="BIPCode">a</field>
+    <field name="BIPVer">b</field>
+    <field name="ActivityCode">c</field>
+    <field name="ActionCode">d</field>
+    <field name="ProcID">e</field>
+    <field name="TransIDO">f</field>
+    <field name="TransIDH">g</field>
+    <field name="ProcessTime">h</field>
+    <field name="TestFlag">i</field>
+    <field name="MsgSender">j</field>
+    <field name="MsgReceiver">k</field> -->
+    <field name="SvcContVer">l</field>
+    <struct name="SvcCont">
+        <struct name="syncOrderRelationReq">
+            <field name="msgTransactionID">m</field>
+            <struct name="subscriptionInfo">
+            <!-- 
+                <field name="oprTime">n</field>
+                <field name="actionID">o</field>
+                <field name="effTime">p</field>
+                <field name="expireTime">q</field>
+                <field name="feeUser_ID">r</field>
+                <field name="destUser_ID">s</field>
+                <field name="actionReasonID">t</field>
+                <field name="servType">u</field>
+                <field name="subServType">v</field>
+                <field name="SPID">w</field>
+                <field name="SPServID">x</field> -->
+                <field name="accessMode">y</field>
+                <!-- 
+                <struct name="servParamInfo">
+                    <field name="para_num">z</field>
+                    <struct name="param_info" isarray="true">
+                        <field name="para_name">aa</field>
+                        <field name="para_value">bb</field>
+                    </struct>
+                </struct> -->
+                <field name="feeType">cc</field>
+            </struct>
+        </struct>
+    </struct>
+</msg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Format>
+    <Document encoding="gb2312">
+        <format>%s</format>
+        <param>m</param>
+    </Document>
+
+    <Field>
+        <format>%s=%[ignoreLen='true']s&amp;</format>
+        <param>n</param>
+        <param>v</param>
+    </Field>
+    <Field>
+        <format>%s=%[ignoreLen='true']s</format>
+        <param>n</param>
+        <param>v</param>
+    </Field>
+
+</Format>

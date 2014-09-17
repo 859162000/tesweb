@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312"?>
+<msg>
+    <struct name="消息头">
+        <field name="版本号" len="4">1.00</field>
+        <field name="终端标志" len="4">AHZD</field>
+        <field name="服务名" len="8">0001DCS</field>
+        <field name="预留4位" len="4"></field>
+    </struct>
+    <struct name="会话头">
+        <field name="会话ID" len="8">0000001A</field>
+        <field name="会话控制字" len="6">DLGCON</field>
+        <field name="预留4位" len="4">aaaa</field>
+    </struct>
+    <struct name="事务头">
+        <field name="事务ID" len="8">000002f5</field>
+        <field name="事务控制字" len="6">TXEND</field>
+        <field name="预留4位" len="4">bbbb</field>
+    </struct>
+    <field name="ID" len='8'>DELE INT GROUP</field>
+    <field name="RETN" len='8'>0000</field>
+    <field name="DESC" len='8'>操作成功</field>
+</msg>

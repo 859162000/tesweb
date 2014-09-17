@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="gb2312"?>
+<conf>
+	<functions>
+		<func lib="seqno.so" name="seqno" desc="流水号" />
+	</functions>
+	<mode1>
+		<req>
+			<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+			<field>
+				<property name="name" displayName="名称1" list=""
+					default="field_demo" width="100" />
+				<property name="desc" displayName="描述1" list=""
+					default="字段类型" width="100" />
+				<property name="isarray" displayName="是否重复1"
+					list="true|false" default="false" width="100" />
+				<property name="type" displayName="类型1"
+					list="C|N|B|F|IMAGE" default="C" width="100" />
+				<property name="len" displayName="长度1" list=""
+					default="0" width="100" />
+				<property name="prec" displayName="精度1" list=""
+					default="0" width="100" />
+			</field>
+			<struct>
+				<property name="name" displayName="名称1" list=""
+					default="struct_demo" width="100" />
+				<property name="desc" displayName="描述1" list=""
+					default="结构类型" width="100" />
+				<property name="isarray" displayName="是否重复1"
+					list="true|false" default="false" width="100" />
+			</struct>
+		</req>
+		<resp>
+			<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+			<field>
+				<property name="name" displayName="名称2" list=""
+					default="field_demo" width="100" />
+				<property name="desc" displayName="描述2" list=""
+					default="字段类型" width="180" />
+				<property name="optional" displayName="是否必填2"
+					list="True|False" default="False" width="120" />
+				<property name="type" displayName="类型2"
+					list="string|C|N|B|F|IMAGE" default="string" width="120" />
+				<property name="len" displayName="长度2" list=""
+					default="0" width="80" />
+			</field>
+			<struct>
+				<property name="name" displayName="名称2" list=""
+					default="struct_demo" width="" />
+				<property name="desc" displayName="描述2" list=""
+					default="结构类型" width="" />
+			</struct>
+		</resp>
+	</mode1>
+	<mode0>
+		<req>
+			<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+			<field>
+				<property name="name" displayName="名称3" list=""
+					default="field_demo" width="100" />
+				<property name="desc" displayName="描述3" list=""
+					default="字段类型" width="100" />
+				<property name="isarray" displayName="是否重复3"
+					list="true|false" default="false" width="100" />
+				<property name="type" displayName="类型3"
+					list="C|N|B|F|IMAGE" default="C" width="100" />
+				<property name="len" displayName="长度3" list=""
+					default="0" width="100" />
+				<property name="prec" displayName="精度3" list=""
+					default="0" width="100" />
+			</field>
+			<struct>
+				<property name="name" displayName="名称3" list=""
+					default="struct_demo" width="100" />
+				<property name="desc" displayName="描述3" list=""
+					default="结构类型" width="100" />
+				<property name="isarray" displayName="是否重复3"
+					list="true|false" default="false" width="100" />
+			</struct>
+		</req>
+		<resp>
+			<empty><![CDATA[<?xml version="1.0" encoding="gb2312"?><msg/>]]></empty>
+			<field>
+				<property name="name" displayName="名称4" list=""
+					default="field_demo" width="100" />
+				<property name="desc" displayName="描述4" list=""
+					default="字段类型" width="180" />
+				<property name="optional" displayName="是否必填4"
+					list="True|False" default="False" width="120" />
+				<property name="type" displayName="类型4"
+					list="string|C|N|B|F|IMAGE" default="string" width="120" />
+				<property name="len" displayName="长度4" list=""
+					default="0" width="80" />
+			</field>
+			<struct>
+				<property name="name" displayName="名称4" list=""
+					default="struct_demo" width="" />
+				<property name="desc" displayName="描述4" list=""
+					default="结构类型" width="" />
+			</struct>
+		</resp>
+	</mode0>
+</conf>

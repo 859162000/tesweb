@@ -1,0 +1,68 @@
+SHELL=/bin/sh
+
+CC=cc 
+CCC=xlC 
+LD=ld 
+AR=ar 
+EC=esql
+
+
+.SUFFIXES: .cpp .so .o .c .ec
+
+.cpp.o          :
+	$(CCC) $(CPPFLAGS) -c $<
+
+.c.o:
+	${CC} ${CFLAGS} -c $<
+
+.o.so           :
+	$(CCC) $(LDFLAGS) $< -G -o $@
+
+.ec.o           :
+	${EC} ${ECFLAGS} $<
+	rm $*.c
+
+SAMPLIB=${HOME}/lib
+SAMPINC=${HOME}/include 
+
+CPPFLAGS=-I${SAMPINC} -I/usr/mqm/inc -I/home/ap/ftss/include -I.  -qcpluscmt -DAIX 
+CFLAGS=${CPPFLAGS} -bstatic 
+#LIBS=-L${SAMPLIB} -L$(TUXDIR)/lib -lmqm -lapicnetLast32 
+#LIBS=-L${SAMPLIB} -L/home/ap/ftss/src/lib -lmqm -lapitcpl32
+LIBS=-L${SAMPLIB} -lmqm -lapitcps32
+LDFLAGS= -L${SAMPLIB} -L${SAMPLIB}/lib 
+ARFLAGS=rv
+
+
+
+
+OBJS=pub.o MQproc.o MQmain.o MQshow.o MQstop.o MQdeal.o 
+
+BINS=MQmain MQstop MQshow MQdeal 
+
+all: ${BINS} clean
+
+MQmain: MQmain.o MQproc.o pub.o 
+	${CC}  -o $@  $? libcsspui.so $(LIBS) 
+	#rm -f $?
+	cp -f $@ ../bin/.
+
+MQstop: MQstop.o MQproc.o pub.o 
+	${CC}  -o $@  $?  libcsspui.so $(LIBS)
+	#rm -f $?
+	cp -f $@ ../bin/.
+
+MQshow: MQshow.o MQproc.o pub.o 
+	${CC}  -o $@  $? libcsspui.so $(LIBS)
+	#rm -f $?
+	cp -f $@ ../bin/.
+
+MQdeal: MQdeal.o MQproc.o pub.o 
+	${CC} -o $@ $?  libcsspui.so $(LIBS)
+	#rm -f $?
+	cp -f $@ ../bin/.
+
+clean:
+	rm -f ${OBJS}
+	rm -f ${BINS}
+

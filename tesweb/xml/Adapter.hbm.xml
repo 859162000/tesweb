@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Adapter" table="t_adapter">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="protocoltype" column="PROTOCOLTYPE" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="cstype" column="CSTYPE" />
+		<property name="pluginname" column="PLUGINNAME" />
+		<property name="cfginfo" column="CFGINFO" />
+
+        <set name="channel" table="t_channel" inverse="false" lazy="false" cascade="all">
+			<key>
+				<column name="ADAPTERID" />
+			</key>
+			<one-to-many class="Channel" />
+		</set>
+
+	</class>
+</hibernate-mapping>

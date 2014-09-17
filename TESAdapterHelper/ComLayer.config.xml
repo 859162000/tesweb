@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<Adapter><adapterType>REQUEST</adapterType><host>127.0.0.1</host><UpPort>8883</UpPort><adapterPlugIn>TCPRequestAdapterPlugin</adapterPlugIn><CHANNELNAME>SendChannel_YQZL</CHANNELNAME><coreIP>127.0.0.1</coreIP><corePort>4693</corePort></Adapter>
+</config>
