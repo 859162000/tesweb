@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="ExecuteSet" table="executeset">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="NAME" />
+		<property name="importBatchNo" column="IMPORTBATCHNO" />
+		<property name="description" column="DESCRIPTION" />
+		
+		<property name="systemId" column="SYSTEMID" />
+		
+		<set name="taskItems" table="executeset_taskitem" order-by="id asc" inverse="true" lazy="false" cascade="all">
+			<key>
+				<column name="EXECUTESETID" />
+			</key>
+			<one-to-many class="ExecuteSetTaskItem" />
+		</set>
+		
+		<set name="executeSetLogs" table="executesetlogstat" order-by="id desc" inverse="true" lazy="false" cascade="all">
+			<key>
+				<column name="EXECUTESETID" />
+			</key>
+			<one-to-many class="ExecuteSetLogStat" />
+		</set>
+
+		<property name="createdUserId" column="CreatedUserId" />
+		<property name="createdTime" column="CreatedTime" />
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />
+	</class>
+</hibernate-mapping>

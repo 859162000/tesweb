@@ -1,0 +1,13 @@
+#Wed Sep 05 15:18:04 CST 2012
+eclipse.preferences.version=1
+encoding//src/com/dc/tes/component/BaseComponent.java=UTF-8
+encoding//src/com/dc/tes/component/ComponentFactory.java=UTF-8
+encoding//src/com/dc/tes/data/xml/BaseDao.java=UTF-8
+encoding//src/com/dc/tes/exception/CommonErr.java=UTF-8
+encoding//src/com/dc/tes/exception/ErrCode.java=UTF-8
+encoding//src/com/dc/tes/net/Message.java=UTF-8
+encoding//src/com/dc/tes/util/ByteArrayUtils.java=UTF-8
+encoding//src/com/dc/tes/util/InstanceCreater.java=UTF-8
+encoding//src/com/dc/tes/util/PackUtils.java=UTF-8
+encoding//src/com/dc/tes/util/RuntimeUtils.java=UTF-8
+encoding/<project>=UTF-8

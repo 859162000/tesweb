@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory name="sessionFactory">
+	<property name="dialect">
+		com.dc.tes.data.db.mysql.BlobMySQLDialect
+	</property>
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+
+	<property name="connection.autoReconnect">true</property>
+	<property name="connection.autoReconnectForPools">true</property>
+	<property name="connection.is-connection-validation-required">
+		true
+	</property>
+	<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+	<property name="hibernate.c3p0.max_size">15</property>
+	<property name="hibernate.c3p0.min_size">0</property>
+	<property name="hibernate.c3p0.timeout">120</property>	
+	<property name="hibernate.c3p0.max_statements">100</property>	
+	<property name="hibernate.c3p0.idle_test_period">120</property>	
+	<property name="hibernate.c3p0.acquire_increment">2</property>
+	
+
+	<property name="hibernate.show_sql">false</property>
+	<property name="hibernate.format_sql">true</property>
+	<mapping resource="com/dc/tes/data/db/hbm/Adapter.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/CaseImportBatch.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/ScriptFlow.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/Card.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/Case.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/CaseFlow.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/CaseFlowInstance.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/CaseInstance.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/FlowCases.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/Channel.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/CommMsgLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/ExecuteLog.hbm.xml"/>		
+	<mapping resource="com/dc/tes/data/db/hbm/HisCaseFlowInstance.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/HisCaseInstance.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/HisCommMsgLog.hbm.xml"/>
+    <mapping resource="com/dc/tes/data/db/hbm/HisExecuteLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/MonitorLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/MsgPacker.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/PerformanceLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/PersistentData.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/ExecuteSetTaskItem.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/ExecuteSetLogStat.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/ExecuteSet.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/RealtimeLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/TransRecognizer.hbm.xml"/>	
+	<mapping resource="com/dc/tes/data/db/hbm/SubBank.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/Subsidiary.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/SysType.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/Transaction.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/User.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/UserRSystem.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/DbHost.hbm.xml"/>
+
+	<mapping resource="com/dc/tes/data/db/hbm/CaseParameterExpectedValue.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/HisCaseInstanceSqlValue.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/SystemDynamicParameter.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/TransactionDynamicParameter.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/TransactionCatetory.hbm.xml" /> 
+	<mapping resource="com/dc/tes/data/db/hbm/CaseInstanceSqlValue.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/CaseInstanceFieldValue.hbm.xml" />
+	
+	<mapping resource="com/dc/tes/data/db/hbm/CaseDirectory.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/ExecuteSetDirectory.hbm.xml" />
+	
+	<mapping resource="com/dc/tes/data/db/hbm/ExecutePlan.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/ExecuteSetExecutePlan.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/TestRound.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/ParameterDirectory.hbm.xml" />
+	
+	<mapping resource="com/dc/tes/data/db/hbm/InterfaceDef.hbm.xml" />
+	<mapping resource="com/dc/tes/data/db/hbm/InterfaceField.hbm.xml" />
+	
+	<mapping resource="com/dc/tes/data/db/hbm/CopiedSystem.hbm.xml"/>
+	
+	<mapping resource="com/dc/tes/data/db/hbm/CaseRunStatistics.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/CaseRunUserStats.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/FactorChangeStatistics.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/FactorChangeUserStats.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/LoginLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/OperationLog.hbm.xml"/>
+	<mapping resource="com/dc/tes/data/db/hbm/RecordedCase.hbm.xml"/>
+	
+</session-factory>
+</hibernate-configuration>
+

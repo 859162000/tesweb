@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="RecordedCase" table="recorded_case">
+
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity"></generator>
+        </id>
+        
+        <property name="systemId" type="java.lang.Integer">
+        	<column name="SYSTEMID" not-null="true">
+        		<comment>系统ID</comment>
+        	</column>
+        </property>
+        
+        <property name="responseFlag" type="java.lang.Integer">
+        	<column name="RESPONSEFLAG" not-null="false">
+        		<comment>是否收到了应答报文</comment>
+        	</column>
+        </property>
+                
+		<property name="requestMsg" column="REQUESTMSG" />
+		<property name="responseMsg" column="RESPONSEMSG" />
+			        
+		<property name="recordUserId" type="java.lang.Integer">
+        	<column name="RECORDUSERID" not-null="false">
+        		<comment>录制用户ID</comment>
+        	</column>
+        </property>
+        
+		<property name="recordTime" column="RECORDTIME" />
+		<property name="createTime" column="CREATETIME" />
+		<property name="memo" column="MEMO" />
+		<property name="isCased" column="ISCASED" />
+
+		
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />
+
+	</class>
+</hibernate-mapping>

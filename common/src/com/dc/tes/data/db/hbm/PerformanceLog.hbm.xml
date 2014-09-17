@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="PerformanceLog" table="performancelog">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="systemname" column="SYSTEMNAME" />
+
+		<property name="delaytime" column="DELAYTIME" />
+		<property name="begintime" column="BEGINTIME" />
+		<property name="endtime" column="ENDTIME" />
+		<property name="avgtps" column="AVGTPS" />
+		<property name="maxtps" column="MAXTPS" />
+		<property name="mintps" column="MINTPS" />
+		<property name="avgdelay" column="AVGDELAY" />
+		<property name="maxdelay" column="MAXDELAY" />
+		<property name="mindelay" column="MINDELAY" />
+		<property name="avgcpu" column="AVGCPU" />
+		<property name="maxcpu" column="MAXCPU" />
+		<property name="mincpu" column="MINCPU" />
+		<property name="sysdata" column="SYSDATA" />
+		<property name="trandata" column="TRANDATA" />
+		
+	</class>
+</hibernate-mapping>

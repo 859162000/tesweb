@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="RealtimeLog" table="realtimelog">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="datatime" column="DATETIME" />
+		<property name="sysname" column="SYSNAME" />
+		<property name="syssign" column="SYSSIGN" />
+		<property name="trancode" column="TRANCODE" />
+		<property name="casename" column="CASENAME" />
+		<property name="errorflag" column="ERRORFLAG" />
+		<property name="type" column="TYPE" />
+
+		<property name="compareresult" column="COMPARERESULT" />
+		<property name="tranname" column="TRANNAME" />
+		<property name="hasscript" column="HASSCRIPT" />
+		<property name="yearm" column="YEARM" />
+		<property name="channel" column="CHANNEL" />
+
+	</class>
+</hibernate-mapping>

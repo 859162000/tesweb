@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="SysType" table="systype">
+
+		<id name="systemId" column="SYSTEMID">
+			<generator class="identity" />
+		</id>
+
+		<property name="systemNo" column="SYSTEMNO" />
+		<property name="systemName" column="SYSTEMNAME" />
+		<property name="desc" column="DESCRIPTION" />
+		<property name="parameterGetSequence" column="PARAMETERGETSEQUENCE" />
+		<property name="stylestruct" column="STYLESTRUCT" />
+		<property name="flag" column="FLAG" />
+		<property name="ipadress" column="IPADRESS" />
+		<property name="portnum" column="PORTNUM" />
+		<property name="channel" column="CHANNEL" />
+		
+		<property name="basecfg" column="BASECFG" />
+		<property name="maxdelaytime" column="MAXDELAYTIME" />
+		<property name="mindelaytime" column="MINDELAYTIME" />
+		
+		<property name="delaytimetype" column="DELAYTIMETYPE" />
+		
+		<property name="isused" column="ISUSED" />
+		<property name="isParamModified" column="ISPARAMMODIFIED" />
+		
+		<property name="needSqlCheck" column="NEEDSQLCHECK" />
+		<property name="transactionTimeOut" column="TRANSACTIONTIMEOUT"/>
+		<property name="sqlGetMethod" column="SQLGETMETHOD"/>
+		<property name="sqlGetDbAddr" column="SQLGETDBADDR"/>
+		<property name="encoding4RequestMsg" column="ENCODING4REQUESTMSG"/>
+		<property name="encoding4ResponseMsg" column="ENCODING4RESPONSEMSG"/>
+		<property name="isClientSimu" column="ISCLIENTSIMU" />
+		<property name="isSyncComm" column="ISSYNCCOMM" />
+		<property name="useSameResponseStruct" column="USESAMERESPNSSTRUCT" />
+		<property name="responseStruct" column="RESPONSESTRUCT" />
+		<property name="responseMode" column="RESPONSEMODE" />
+		<property name="reqMsgUnpackerId" column="ReqMsgUnPackID" />
+		<property name="resMsgUnpackerId" column="ResMsgUnPackID" />
+		
+		<property name="businessProcessor" column="BUSINESSPROCESSOR" />
+		
+		<property name="createdUserId" column="CreatedUserId" />
+		<property name="createdTime" column="CreatedTime" />
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />
+
+	</class>
+</hibernate-mapping>

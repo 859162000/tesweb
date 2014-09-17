@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/bcprov-jdk14-145.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/tools.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_workspace/tesweb/war/WEB-INF/lib/junit.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

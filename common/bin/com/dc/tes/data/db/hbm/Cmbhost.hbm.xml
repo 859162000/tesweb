@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Cmbhost" table="tes_cmbhost">
+
+		<id name="hostid" column="HOSTID">
+			<generator class="identity" />
+		</id>
+
+		<property name="cmbhost" column="CMBHOST" />
+		<property name="ipaddress" column="IPADDRESS" />
+		<property name="portnum" column="PORTNUM" />
+		<property name="dbType" column="DBTYPE" />
+		<property name="dbName" column="DBNAME" />
+		<property name="dbUser" column="DBUSER" />
+		<property name="dbPwd" column="DBPWD" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="systemId" column="SYSTEMID" />
+		<property name="isLongConn" column="ISLONGCONN" />
+
+	</class>
+</hibernate-mapping>

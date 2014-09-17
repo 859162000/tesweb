@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="ScriptFlow" table="scriptflow">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="NAME" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="srcipt" column="SCRIPT" />
+		
+		<property name="systemid" column="SYSTEMID" />
+
+		<property name="createdUserId" column="CreatedUserId" />
+		<property name="createdTime" column="CreatedTime" />
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />	
+		
+	</class>
+</hibernate-mapping>

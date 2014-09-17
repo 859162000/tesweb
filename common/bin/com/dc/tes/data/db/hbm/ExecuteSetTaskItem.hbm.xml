@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="ExecuteSetTaskItem" table="executeset_taskitem">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="executeSet" class="ExecuteSet" fetch="join"> <!-- lazy="false" -->
+			<column name="EXECUTESETID" not-null="true" ></column>
+		</many-to-one>
+		
+		<property name="taskId" column="TASKID" />
+		<property name="type" column="TYPE" />
+		<property name="repCount" column="REPCOUNT" />
+		<property name="name" column="NAME" />
+		
+		<property name="transactionId" column="TRANSACTIONID" />
+
+	</class>
+</hibernate-mapping>

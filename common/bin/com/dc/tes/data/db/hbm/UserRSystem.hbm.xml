@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="UserRSystem" table="userrsystem">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="userid" column="USERID" />
+		<property name="systemid" column="SYSTEMID" />
+
+		<!--  
+		<many-to-one name="userid" class="User" fetch="select">
+			<column name="USERID" not-null="true" />
+		</many-to-one>
+
+		<many-to-one name="systemid" class="SysType" fetch="select">
+			<column name="SYSTEMID" not-null="true" />
+		</many-to-one>
+		
+		-->
+
+
+
+	</class>
+</hibernate-mapping>

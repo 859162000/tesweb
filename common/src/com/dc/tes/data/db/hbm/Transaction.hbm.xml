@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Transaction" table="transaction">
+
+		<id name="transactionId" column="TRANSACTIONID">
+			<generator class="identity" />
+		</id>
+
+		<property name="tranCode" column="TRANCODE" />
+		<property name="tranName" column="TRANNAME" />
+		<property name="isClientSimu" column="ISMODE" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="script" column="SCRIPT" />
+		<property name="requestStruct" column="REQUSETSTRUCT" lazy="true" />
+		<property name="responseStruct" column="RESPONSESTRUCT" lazy="true" />
+		<property name="category" column="CATEGORY" />
+		<property name="flag" column="FLAG" />
+		<property name="systemId" column="SYSTEMID" />
+		<property name="channel" column="CHANNEL" />
+		<property name="maxdelaytime" column="MAXDELAYTIME" />
+		<property name="mindelaytime" column="MINDELAYTIME" />
+		<property name="transactionCategoryId" column="TRANSACTIONCATEGORYID"/>
+		<property name="parameterGetSequence" column="PARAMETERGETSEQUENCE" />
+		<property name="sqlDelayTime" column="SQLDELAYTIME" />
+
+		<property name="createdUserId" column="CreatedUserId" />
+		<property name="createdTime" column="CreatedTime" />
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />
+<!--  
+		<set name="caseSet" table="t_case" inverse="false" lazy="false"
+			cascade="all">
+			<key>
+				<column name="TRANSACTIONID" />
+			</key>
+			<one-to-many class="Case" />
+		</set>
+-->
+		<!--
+			<many-to-one name="systemId" column="SYSTEMID" class="SysType"
+			not-null="true"> </many-to-one>
+		-->
+
+
+	</class>
+</hibernate-mapping>

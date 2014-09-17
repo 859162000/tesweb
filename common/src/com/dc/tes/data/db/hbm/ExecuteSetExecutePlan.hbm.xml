@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="ExecuteSetExecutePlan" table="executeset_executeplan">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="executeSetDirId" column="EXECUTESETDIRID" />
+		<property name="executePlanId" column="EXECUTEPLANID" />
+		<property name="systemId" column="SYSTEMID" />
+		<property name="addUserId" column="ADDUSERID" />
+		<property name="addTime" column="ADDTIME" />
+		<property name="scheduledRunStatus" column="SCHEDULEDRUNSTATUS" />
+		<property name="beginRunTime" column="BEGINRUNTIME" />
+		<property name="endRunTime" column="ENDRUNTIME" />
+		<property name="scheduleRunMachine" column="SCHEDULEDRUNMACHINE" />
+		<property name="scheduleRunMacName" column="SCHEDULEDRUNMACNAME" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory name="sessionFactory">
+		<property name="dialect">org.hibernate.dialect.DerbyDialect</property>
+		<property name="connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<mapping resource="com/dc/tes/data/db/hbm/Case.hbm.xml"></mapping>
+		<mapping resource="com/dc/tes/data/db/hbm/SysType.hbm.xml"></mapping>
+		<mapping resource="com/dc/tes/data/db/hbm/Transaction.hbm.xml"></mapping>
+		<mapping resource="com/dc/tes/data/db/hbm/User.hbm.xml"></mapping>
+		<mapping resource="com/dc/tes/data/db/hbm/UserRSystem.hbm.xml"></mapping>
+		<mapping resource="com/dc/tes/data/db/hbm/MonitorLog.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/PersistentData.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/RealtimeLog.hbm.xml" />
+
+		<mapping resource="com/dc/tes/data/db/hbm/Adapter.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/RecCode.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/Pack.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/Channel.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/BusiFlow.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/QueueList.hbm.xml" />
+		<mapping resource="com/dc/tes/data/db/hbm/QueueTask.hbm.xml" />
+
+		<mapping resource="com/dc/tes/data/db/hbm/PerformanceLog.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
+

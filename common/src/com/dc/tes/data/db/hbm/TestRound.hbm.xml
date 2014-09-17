@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="TestRound" table="test_round">
+
+		<id name="roundId" column="ROUNDID">
+			<generator class="identity" />
+		</id>
+
+		<property name="systemId" column="SYSTEMID" />
+		<property name="roundNo" column="ROUNDNO" />
+		<property name="roundName" column="ROUNDNAME" />
+		<property name="description" column="DESCRIPTION" />
+		<property name="startDate" column="STARTDATE" />
+		<property name="endDate" column="ENDDATE" />
+		<property name="currentRoundFlag" column="CURRENTROUNDFLAG" />
+		
+		<property name="createdUserId" column="CreatedUserId" />
+		<property name="createdTime" column="CreatedTime" />
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />
+		
+	</class>
+</hibernate-mapping>

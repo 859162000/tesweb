@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Channel" table="channel">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="name" column="NAME" />
+		
+		<!-- <property name="adapterid" column="ADAPTERID" />   -->
+		<many-to-one name="adapter" class="Adapter" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="ADAPTERID" not-null="true" ></column>
+		</many-to-one>
+		
+		<many-to-one name="transRecognizer" class="TransRecognizer" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="TRANSRECOGNIZERID" not-null="false" ></column>
+		</many-to-one>
+		
+		<!--  <property name="packid" column="PACKID" /> -->
+		<many-to-one name="packChannel" class="MsgPacker" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="PACKID" not-null="false" ></column>
+		</many-to-one>
+		
+		<!--  <property name="unpackid" column="UNPACKID" /> -->
+		<many-to-one name="unpackChannel" class="MsgPacker" fetch="select" lazy="false"> <!-- lazy="false" -->
+			<column name="UNPACKID" not-null="false" ></column>
+		</many-to-one>
+		
+		
+		<!--  <property name="defaultfalg" column="DEFAULTFLAG" /> -->
+		
+		
+		<property name="sendAdapterIP" column="SENDADAPTERIP" />
+		<property name="sendAdapterPort" column="SENDADAPTERPORT" />
+		<property name="adapterCfgInfo" column="ADAPTERCFGINFO" />
+		<property name="recognizerCfgInfo" column="RECOGNIZERCFGINFO" />
+
+		<property name="systemId" column="SYSTEMID" />
+		<property name="channelType" column="CHANNELTYPE" />
+		
+		<property name="createdUserId" column="CreatedUserId" />
+		<property name="createdTime" column="CreatedTime" />
+		<property name="lastModifiedTime" column="LastModifiedTime" />
+		<property name="lastModifiedUserId" column="LastModifiedUserId" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.dc.tes.data.model">
+	<class name="Pack" table="t_pack">
+
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+
+		<property name="stylename" column="STYLENAME" />
+		<property name="type" column="TYPE" />
+		<property name="messagetype" column="MESSAGETYPE" />
+		<property name="classname" column="CLASSNAME" />
+		<property name="content" column="CONTENT" />
+		
+		<set name="packchannel" table="t_channel" inverse="false" lazy="false" cascade="all">
+			<key>
+				<column name="PACKID" />
+			</key>
+			<one-to-many class="Channel" />
+		</set>
+		
+		<set name="unpackchannel" table="t_channel" inverse="false" lazy="false" cascade="all">
+			<key>
+				<column name="UNPACKID" />
+			</key>
+			<one-to-many class="Channel" />
+		</set>
+		
+	</class>
+</hibernate-mapping>
